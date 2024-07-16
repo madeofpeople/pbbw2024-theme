@@ -1,8 +1,8 @@
 <?php
  /**
   * Title: Donate Tout
-  * Slug: the-territory/component-donate-tout
-  * Categories: the-territory, button, tout
+  * Slug: bpbw/component-donate-tout
+  * Categories: bpbw, button, tout
   */
 ?>
 
@@ -12,7 +12,7 @@
         <!-- wp:group {"className":"title__wrapper"} -->
         <div class="wp-block-group title__wrapper">
             <!-- wp:heading {"level":4,"placeholder":"Add Heading...","className":"tout__title"} -->
-            <h4 class="tout__title"><?php esc_html_e( 'Title', 'the-territory' ); ?></h4>
+            <h4 class="tout__title"><?php esc_html_e( 'Title', 'bpbw' ); ?></h4>
             <!-- /wp:heading -->
         </div>
         <!-- /wp:group -->

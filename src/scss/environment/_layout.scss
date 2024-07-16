@@ -2,7 +2,9 @@
 
 $space: get-spacing();
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
 	box-sizing: border-box;
 }
 
@@ -11,17 +13,11 @@ $space: get-spacing();
 }
 
 main {
-    max-width: 1600px;
+	max-width: 1600px;
 	min-height: 50vh;
-    margin: 0 auto;
-    background-color: color('white');
+	margin: 0 auto;
+	background-color: #fff;
 }
-
-.page-template-default .entry-title,
-.page-template-default .entry-header {
-	@extend %screen-reader-text;
-}
-
 
 .page {
 	.entry-content {
@@ -29,128 +25,63 @@ main {
 	}
 }
 
-.page-press,
-.page.home {
-	.entry-content {
-		padding-bottom: 0;
-	}
-}
-
 .error404,
-.page-template-template-base-page {
+body.page {
 	.page-title {
-		font-size: map.get($font-sizes, h1);
-		@include acumin;
+		font-size: map.get( $font-sizes, h1 );
+		@include display-font;
 	}
+
 	.entry-header {
 		padding-left: get-spacing();
 		padding-right: get-spacing();
-		font-size: map.get($font-sizes, h1);
-		@include acumin;
+		font-size: map.get( $font-sizes, h1 );
+		@include display-font;
 		.entry-title {
-			@include acumin;
-	}
-}
-}
-
-.section.engage-amplify {
-	padding-bottom: get-spacing();
-}
-
-.schedule-screening__intro {
-	@include acumin;
-	font-size: map.get($font-sizes, h4);
-	font-weight: 400;
-}
-
-.section.demand-change {
-	.section.support {
-		.wp-block-cover {
-			padding-top: 30rem;
-			.content {
-				padding: 0.5 * $space;
-				background-color: rgba( color( 'black' ), 0.8);
-				margin-bottom: 0.5 * $space;
-				color:  color( 'white' );
-			}
+			@include display-font;
 		}
 	}
-}
 
-.section {
-	> .learn-more__content,
-	> .donate-touts,
-	> p,
-	> h3,
-	> h4,
-	> .lede {
-		padding-left: get-spacing(0.5);
-		padding-right: get-spacing(0.5);
+	section > .content {
+		border: 1px #dedede solid;
+		padding: get-spacing( 1 );
 		@media ( min-width: bp(sm) ) {
-			padding-left: get-spacing();
-			padding-right: get-spacing();
+			padding: get-spacing( 2 );
 		}
 	}
 }
 
+.body-open,
 .svg-sprite-wrapper {
 	position: fixed;
 	top: 0;
 	left: -100vw;
 }
 
+.article-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: grid;
 
-.lax {
+	grid-template-columns: 1fr;
+
 	@media ( min-width: bp(sm) ) {
-		min-height: 550px;
+		grid-template-columns: 1fr 1fr;
 	}
-}
 
-.page-template-template-base-page,
-.error404,
-.privacy-policy {
-	.error-404 {
-		padding-top: get-spacing();
+	@media ( min-width: bp(lg) ) {
+		grid-template-columns: 1fr 1fr 1fr;
 	}
-	.error-404,
-	.entry-content {
-		padding-left: get-spacing();
-		padding-right: get-spacing();
-		padding-bottom: get-spacing();
 
-		h1,
-		h2,
-		h3 {
-			margin-top: 0;
-		}
-		h2 {
-			font-size: map.get($font-sizes, h4) !important;
-		}
-		p {
-			margin-bottom: get-spacing();
-		}
-	}
-}
-
-article.type-page {
-	overflow: hidden;
-}
-
-
-.page-donate-to-kaninde,
-.page-donate-to-the-uru-eu-wau-wau {
-
-	.wp-block-buttons {
-
-		padding-left: 2.768rem;
-
-		.wp-block-button__link {
-
-			&:hover,
-			&:active,
-			&:focus {
-				background-color: color(green-mid);
-			}
+	li {
+		padding: 0;
+		background-color: white;
+		border: 1px #dedede solid;
+		display: grid-item;
+		padding: get-spacing( 0.5 ) get-spacing( 0.5 );
+		&:hover {
+			background-color: #fde;
 		}
 	}
 }

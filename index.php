@@ -9,10 +9,22 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package The Territory
+ * @package BPBW
  */
 
- get_header();
+?>
+
+<!-- before header -->
+<?php
+
+	get_header();
+
+	if ( \has_block( 'site-functionality/page-header' ) ) :
+		?>
+		<?php bpbw_header(); ?>
+		<?php
+	endif;
+
 
 	if ( have_posts() ) :
 		if ( is_home() && ! is_front_page() ) :
@@ -41,12 +53,14 @@
 
 		endwhile;
 
-		the_territory_display_numeric_pagination();
+		bpbw_display_numeric_pagination();
 
 	else :
 		get_template_part( 'template-parts/content', 'none' );
 	endif;
 	?>
+
+	<!-- after header -->
 
 	<?php
 	if ( is_active_sidebar( 'content-bottom' ) ) :

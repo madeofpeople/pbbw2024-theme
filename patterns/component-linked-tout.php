@@ -1,8 +1,8 @@
 <?php
  /**
   * Title: Linked Tout
-  * Slug: the-territory/component-linked-tout
-  * Categories: the-territory, button, tout
+  * Slug: bpbw/component-linked-tout
+  * Categories: bpbw, button, tout
   */
 ?>
 

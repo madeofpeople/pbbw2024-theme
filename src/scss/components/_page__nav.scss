@@ -6,45 +6,49 @@
 	width: 100%;
 	padding: 0;
 	gap: 0;
-	box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
-	background-color: color(green-dark);
+	box-shadow: 0 1rem 1rem rgba( 0, 0, 0, 0.3 );
+	border: 1px #dedede solid;
+	.menu {
+		list-style: none;
+		padding: 0;
+	}
 	.menu-item {
 		flex-grow: 1;
-		background-color: color('black');
-		.wp-block-button__link  {
+		.wp-block-button__link {
 			display: block;
 			border: none;
-			font-size: map.get($font-sizes, h4);
-			padding: get-spacing(0.125);
+			font-size: map.get( $font-sizes, h4 );
+			padding: get-spacing( 0.125 );
 		}
 	}
 }
 
-
 .site-header {
-
 	z-index: 50000;
+	display: flex;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	transition-property: top;
+	transition-timing-function: cubic-bezier( 0.25, 1, 0.5, 1 );
+	transition-duration: 0.7s;
+	transition-delay: 0;
 
 	.page__nav {
+		display: block;
+		position: absolute;
+		padding-left: get-spacing( 0.5 );
+		padding-right: get-spacing( 0.5 );
 
-		display: flex;
-		position: fixed;
-		top: -5rem;
-		padding: get-spacing(0.5);
-		background: linear-gradient(0deg, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 100%);
-		transition-property: top;
-		transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
-		transition-duration: 0.7s;
-		transition-delay: 0;
+		background: linear-gradient(
+			0deg,
+			rgba( 34, 34, 34, 1 ) 0%,
+			rgba( 34, 34, 34, 0 ) 100%
+		);
 
 		.wp-block-button__link {
-			background-color: color('green-dark');
-			@include acumin;
-			text-transform: uppercase;
-			border: 1px color('white') solid;
+			@include display-font;
 			&.active {
-				background-color: color('green');
-				color: color('black');
 				border-radius: 0;
 			}
 		}
@@ -58,12 +62,12 @@
 		height: 32px;
 		.menu-item {
 			a {
-				@include acumin;
-				font-size: map.get($font-sizes, h5) !important;
+				@include display-font;
+				font-size: map.get( $font-sizes, h5 ) !important;
 			}
 		}
 
-		@media (min-width: bp(md) ) {
+		@media ( min-width: bp(md) ) {
 			top: 4.5rem;
 			.admin-bar & {
 				top: 6.5rem;
@@ -77,13 +81,14 @@
 			@include page__nav--small;
 		}
 	}
-	&:not(.out-of-view) {
-		.page__nav {
-			display: none;
-			position: static;
-			padding-left: get-spacing(0.5);
-			padding-right: get-spacing(0.5);
-		}
-	}
 
+	// &:not( .out-of-view ) {
+	// 	.page__nav {
+	// 		display: block;
+	// 		position: absolute;
+	// 		top: 0;
+	// 		padding-left: get-spacing( 0.5 );
+	// 		padding-right: get-spacing( 0.5 );
+	// 	}
+	// }
 }

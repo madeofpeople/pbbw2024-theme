@@ -1,8 +1,8 @@
 <?php
  /**
   * Title: Awards
-  * Slug: the-territory/component-awards
-  * Categories: the-territory, gallery
+  * Slug: bpbw/component-awards
+  * Categories: bpbw, gallery
   */
 ?>
 

@@ -2,7 +2,7 @@
 /**
  * Enable multiple WYSIWYG editors in the theme customizer.
  *
- * @package The Territory
+ * @package BPBW
  */
 
 if ( ! class_exists( 'WP_Customize_Control' ) ) {

@@ -1,8 +1,8 @@
 <?php
  /**
   * Title: Testimonial
-  * Slug: the-territory/testimonial
-  * Categories: the-territory, text
+  * Slug: bpbw/testimonial
+  * Categories: bpbw, text
   */
 ?>
 <!-- wp:site-functionality/tout {"className":"testimonial"} -->

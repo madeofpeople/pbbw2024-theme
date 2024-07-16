@@ -4,14 +4,14 @@ import { __ } from '@wordpress/i18n';
 const variations = [
     {
         name: 'donate',
-        title: __( 'Donate', 'the-territory' ),
-        description: __( 'Donate Link.', 'the-territory' ),
+        title: __( 'Donate', 'bpbw' ),
+        description: __( 'Donate Link.', 'bpbw' ),
         category: 'media',
         icon: 'money-alt',
         keywords: [
-            __( 'group', 'the-territory' ),
-            __( 'link', 'the-territory' ),
-            __( 'toutt', 'the-territory' )
+            __( 'group', 'bpbw' ),
+            __( 'link', 'bpbw' ),
+            __( 'toutt', 'bpbw' )
         ],
         attributes: {
             className: 'donate-tout',
@@ -41,7 +41,7 @@ const variations = [
                                 {
                                     level: 4,
                                     className: 'tout__title',
-                                    placeholder: __( 'Add Heading...', 'the-territory' )
+                                    placeholder: __( 'Add Heading...', 'bpbw' )
                                 },
                             ]
                         ]
@@ -86,7 +86,7 @@ const variations = [
                                     attributes: {
                                         level: 4,
                                         className: 'tout__title',
-                                        content: __( 'Donate to the Uru-eu-wau-wau Association', 'the-territory' ),
+                                        content: __( 'Donate to the Uru-eu-wau-wau Association', 'bpbw' ),
                                     },
                                 }
                             ]

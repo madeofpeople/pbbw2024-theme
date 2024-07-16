@@ -1,31 +1,49 @@
 @use 'sass:map';
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+
 @font-face {
-    font-family: pragmatica--bold;
-    src: url('../fonts/pragmatica--bold.woff2') format('woff2'),
-        url('../fonts/pragmatica--bold.woff') format('woff');
+    font-family: dmsans;
+	font-weight: regular;
+    src: url('../fonts/DMSans-Regular.woff2') format('woff2');
 	font-display: swap;
 }
 
 @font-face {
-    font-family: acumin-extra-condensed--bold;
-    src: url('../fonts/acumin-extra-condensed--bold.woff2') format('woff2'),
-        url('../fonts/acumin-extra-condensed--bold.woff') format('woff');
+    font-family: dmsans;
+	font-weight: regular;
+	font-style: italic;
+    src: url('../fonts/DMSans-Regular-Italic.woff2') format('woff2');
+	font-display: swap;
+}
+
+@font-face {
+    font-family: dmsans;
+	font-weight: bold;
+    src: url('../fonts/DMSans-Bold.woff2') format('woff2');
+	font-display: swap;
+}
+
+@font-face {
+    font-family: dmsans;
+	font-weight: bold;
+	font-style: italic;
+    src: url('../fonts/DMSans-Bold-Italic.woff2') format('woff2');
 	font-display: swap;
 }
 
 $font-sizes: (
 	'body': 1rem,
-	'h5': 1.2rem,
-	'h4': 1.44rem,
-	'h3': 1.728rem,
-	'h2': 2.074rem,
-	'h1': 2.448rem,
+	'h5': 1.563rem,
+	'h4': 1.953rem,
+	'h3': 2.441rem,
+	'h2': 3.052rem,
+	'h1': 3.815rem,
 	'lede': 1.2rem,
 	'huge': 4rem
 );
 
+$display-font: 'dmsans';
 $body-font: 'Source Sans Pro', sans-serif;
 
 html,
@@ -44,14 +62,15 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: pragmatica--bold, sans-serif;
-    text-transform: uppercase;
 	line-height: 1.2;
+}
+
+h1 {
+	font-size: map.get($font-sizes, h1);
 }
 
 h2 {
 	font-size: map.get($font-sizes, h2);
-	color: color(green-mid);
 }
 
 h3 {
@@ -60,59 +79,27 @@ h3 {
 
 @mixin h2 {
 	font-size: map.get($font-sizes, h2);
-    font-family: pragmatica--bold, sans-serif;
-    text-transform: uppercase;
 	line-height: 1.2;
 }
 
 @mixin h3 {
 	font-size: map.get($font-sizes, h3);
-	font-family: pragmatica--bold, sans-serif;
-    text-transform: uppercase;
 	line-height: 1.2;
 }
 
 @mixin h4 {
 	font-size: map.get($font-sizes, h4);
-    font-family: pragmatica--bold, sans-serif;
-    text-transform: uppercase;
 	line-height: 1.2;
 }
-
 
 @mixin h5 {
 	font-size: map.get($font-sizes, h5);
-    font-family: pragmatica--bold, sans-serif;
-    text-transform: uppercase;
 	line-height: 1.2;
 }
 
-@mixin acumin {
-	font-family: acumin-extra-condensed--bold, sans-serif;
-	font-weight: 400;
-	letter-spacing: 1px;
-}
-
-.entry-content > .section:not(.learn-more-message) > h2 {
-    text-transform: uppercase;
-	font-size: map.get($font-sizes, h3);
-	margin-top: get-spacing(0.5) ;
-	margin-bottom: get-spacing(0.5);
-	@media ( min-width: bp(sm) ) {
-		font-size: map.get($font-sizes, h2);
-		margin-top: get-spacing() ;
-		margin-bottom: get-spacing(0.5);
-	}
-	&::before {
-		content: '';
-		margin-right: get-spacing() * .75;
-		border-left: (get-spacing() * .25) color(green-mid) solid;
-	}
-}
-
-.section > h3 {
-	color: color(green-mid);
-	margin-top: get-spacing();
+@mixin display-font {
+	font-family: $display-font, sans-serif;
+	font-weight: 800;
 }
 
 .lede {

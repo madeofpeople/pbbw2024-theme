@@ -5,7 +5,7 @@ const variations = [
     {
         name: 'parallax',
         title: __('Cover', 'debtcollective'),
-        description: __('Cover image with background image.', 'the-territory'),
+        description: __('Cover image with background image.', 'bpbw'),
         keywords: [
             __('image', 'debtcollective'),
             __('background', 'debtcollective'),
@@ -43,7 +43,7 @@ const variations = [
                         className: 'cover__title',
                         level: 2,
                         textColor: 'white',
-                        content: __( 'Indigenous-led Monitoring and Surveillance', 'the-territory' )
+                        content: __( 'Indigenous-led Monitoring and Surveillance', 'bpbw' )
                     }
                 },
                 {
@@ -51,7 +51,7 @@ const variations = [
                     attributes: {
                         className: 'cover__content',
                         textColor: 'white',
-                        content: __( 'We are calling on governments and businesses to work together to finance and empower indigenous-led monitoring for deforestation-free supply chains.', 'the-territory' )
+                        content: __( 'We are calling on governments and businesses to work together to finance and empower indigenous-led monitoring for deforestation-free supply chains.', 'bpbw' )
                     }
                 }
             ]

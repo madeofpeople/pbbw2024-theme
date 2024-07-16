@@ -1,12 +1,6 @@
 .wp-block-site-functionality-social-cards {
 	@extend %grid-three;
-
-	padding-left: get-spacing(0.5);
-	padding-right: get-spacing(0.5);
-	@media ( min-width: bp(sm) ) {
-		padding-left: get-spacing();
-		padding-right: get-spacing();
-	}
+	margin-top: get-spacing( 1 );
 
 	ul {
 		list-style: none;
@@ -27,13 +21,13 @@
 		position: relative;
 		height: 100%;
 		aspect-ratio: 1/1;
-		background-color: color('black');
+		background-color: color( 'black' );
 
 		.image-group {
 			position: relative;
 			top: 50%;
 			left: 50%;
-			transform: translate3d(-50%, -50%, 0);
+			transform: translate3d( -50%, -50%, 0 );
 
 			.slick-arrow {
 				z-index: 10;
@@ -60,7 +54,7 @@
 				width: 2rem;
 				height: 2rem;
 				background-size: contain;
-				background-image: url('../images/icons/stack.svg');
+				background-image: url( '../images/icons/stack.svg' );
 				background-repeat: no-repeat;
 			}
 		}
@@ -71,17 +65,17 @@
 			left: 50%;
 			display: flex;
 			justify-content: space-between;
-			background-color: color('white');
-			padding: get-spacing(0.25);
-			border-radius: get-spacing(0.25);
-			transform: translate(-50%, -50%);
+			background-color: color( 'white' );
+			padding: get-spacing( 0.25 );
+			border-radius: get-spacing( 0.25 );
+			transform: translate( -50%, -50% );
 			transition-property: bottom;
 			transition-duration: 0.325s;
-			transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+			transition-timing-function: cubic-bezier( 0.445, 0.05, 0.55, 0.95 );
 
-			li:nth-child(2n) {
-				padding-left: get-spacing(0.25);
-				padding-right: get-spacing(0.25);
+			li:nth-child( 2n ) {
+				padding-left: get-spacing( 0.25 );
+				padding-right: get-spacing( 0.25 );
 			}
 
 			svg {
@@ -90,9 +84,9 @@
 			}
 
 			@media ( min-width: bp(md) ) {
-				li:nth-child(2n) {
-					padding-left: get-spacing(0.5);
-					padding-right: get-spacing(0.5);
+				li:nth-child( 2n ) {
+					padding-left: get-spacing( 0.5 );
+					padding-right: get-spacing( 0.5 );
 				}
 				svg {
 					width: 2rem;

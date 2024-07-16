@@ -4,9 +4,9 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package The Territory
+ * @package BPBW
  */
-namespace The_Territory;
+namespace bpbw;
 
 /**
  * Get Header Image ID
@@ -39,7 +39,7 @@ function get_header_image_id( $args = [] ) {
  */
 function get_block( $name, $content = null ) {
 	global $post;
-	$return = false;		
+	$return = false;
 	if ( $post && ! is_wp_error( $post ) ) {
 		$blocks = \parse_blocks( $post->post_content );
 		foreach ( $blocks as $block ) {
@@ -55,7 +55,7 @@ function get_block( $name, $content = null ) {
 
 /**
  * Check if contains video
- * 
+ *
  * @link https://developer.wordpress.org/reference/functions/wp_get_attachment_url/
  *
  * @param array $media
@@ -90,11 +90,11 @@ function is_video( int $media_id, $formats = array( 'mp4', 'webm', 'm4v' ) ) {
 
 /**
  * Get data type
- * 
+ *
  * @link https://developer.wordpress.org/reference/functions/wp_get_attachment_url/
  *
  * @param integer $media_id
- * @return string 
+ * @return string
  */
 function get_data_type( int $media_id ) {
 	$media_attributes = \wp_get_attachment_url( $media_id );

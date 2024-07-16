@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package The Territory
+ * @package BPBW
  */
 $base_class = $args['base_class'];
 $permalink =  esc_url( get_permalink() );

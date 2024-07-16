@@ -16,7 +16,9 @@ function initializeMobileMenu() {
 	const mobileMenuInnerToggle = mobileMenu.querySelector(
 		'.menu__inner-toggle'
 	);
+
 	const mobileMenuUnderlay = document.querySelector( '.menu__underlay' );
+	console.log( 'mobileMenuUnderlay', mobileMenuUnderlay );
 	mobileMenuToggle.addEventListener( 'click', ( e ) => {
 		e.preventDefault();
 		mobileMenu.classList.toggle( 'open' );

@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package The Territory
+ * @package BPBW
  */
 
 ?>
@@ -18,8 +18,8 @@
 			if ( 'post' === get_post_type() ) :
 				?>
 				<div class="entry-meta">
-					<?php the_territory_post_date(); ?>
-					<?php the_territory_post_author(); ?>
+					<?php bpbw_post_date(); ?>
+					<?php bpbw_post_author(); ?>
 				</div><!-- .entry-meta -->
 			<?php endif; ?>
 		</header><!-- .entry-header -->
@@ -30,7 +30,7 @@
 					sprintf(
 						wp_kses(
 							/* translators: %s: Name of current post. */
-							esc_html__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'the-territory' ),
+							esc_html__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'bpbw' ),
 							[
 								'span' => [
 									'class' => [],
@@ -43,7 +43,7 @@
 
 				wp_link_pages(
 					[
-						'before' => '<div class="page-links">' . esc_attr__( 'Pages:', 'the-territory' ),
+						'before' => '<div class="page-links">' . esc_attr__( 'Pages:', 'bpbw' ),
 						'after'  => '</div>',
 					]
 				);
@@ -51,7 +51,7 @@
 		</div><!-- .entry-content -->
 
 		<footer class="entry-footer">
-			<?php the_territory_entry_footer(); ?>
+			<?php bpbw_entry_footer(); ?>
 		</footer><!-- .entry-footer -->
 
 	</article><!-- #post-## -->

@@ -50,7 +50,7 @@
 	} );
 
 	// Copyright text.
-	api( 'the_territory_copyright_text', function ( value ) {
+	api( 'bpbw_copyright_text', function ( value ) {
 		value.bind( function ( to ) {
 			$( '.site-info' ).text( to );
 		} );

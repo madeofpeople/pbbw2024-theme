@@ -1,5 +1,6 @@
 <?php $array = trp_custom_language_switcher();  ?>
 <!-- IMPORTANT! You need to have data-no-translation on the wrapper with the links or TranslatePress will automatically translate them in a secondary language. -->
+<!-- @mop! -->
 <!--
 <ul data-no-translation>
     <?php foreach ($array as $name => $item){ ?>

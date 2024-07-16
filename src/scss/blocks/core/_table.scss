@@ -36,7 +36,6 @@
 		}
 
 		&::before {
-			@apply block uppercase;
 
 			content: attr( data-label );
 

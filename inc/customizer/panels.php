@@ -2,7 +2,7 @@
 /**
  * Customizer panels.
  *
- * @package The Territory
+ * @package BPBW
  */
 
 /**
@@ -12,7 +12,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Instance of WP_Customize_Class.
  */
-function the_territory_customize_panels( $wp_customize ) {
+function bpbw_customize_panels( $wp_customize ) {
 	// Register a new panel.
 	$wp_customize->add_panel(
 		'site-options',
@@ -20,10 +20,10 @@ function the_territory_customize_panels( $wp_customize ) {
 			'priority'       => 10,
 			'capability'     => 'edit_theme_options',
 			'theme_supports' => '',
-			'title'          => esc_html__( 'Site Options', 'the-territory' ),
-			'description'    => esc_html__( 'Other theme options.', 'the-territory' ),
+			'title'          => esc_html__( 'Site Options', 'bpbw' ),
+			'description'    => esc_html__( 'Other theme options.', 'bpbw' ),
 		]
 	);
 }
 
-add_action( 'customize_register', 'the_territory_customize_panels' );
+add_action( 'customize_register', 'bpbw_customize_panels' );

@@ -2,17 +2,17 @@
 /**
  * Register Block Patterns.
  *
- * @package The Territory
+ * @package BPBW
  */
-namespace The_Territory\Inc\Blocks\Patterns;
+namespace bpbw\Inc\Blocks\Patterns;
 
 \register_block_pattern_category(
-    'the-territory',
-    array( 'label' => __( 'The Territory', 'the-territory' ) )
+    'bpbw',
+    array( 'label' => __( 'BPBW', 'bpbw' ) )
 );
 
 \register_block_pattern_category(
     'layout',
-    array( 'label' => __( 'Layout', 'the-territory' ) )
+    array( 'label' => __( 'Layout', 'bpbw' ) )
 );
 

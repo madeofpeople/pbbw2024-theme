@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package The Territory
+ * @package BPBW
  */
 
 ?>
@@ -27,8 +27,8 @@
 	?>
 
 	<?php
-	if ( is_active_sidebar( 'content-bottom' ) ) : 
-		get_sidebar( 'content-bottom' ); 
+	if ( is_active_sidebar( 'content-bottom' ) ) :
+		get_sidebar( 'content-bottom' );
 	endif;
 	?>
 

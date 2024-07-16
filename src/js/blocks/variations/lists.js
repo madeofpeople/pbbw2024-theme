@@ -4,13 +4,13 @@ import { __ } from '@wordpress/i18n';
 const variations = [
     {
         name: 'list',
-        title: __( 'Basic List', 'the-territory' ),
-        description: __( 'Display a basic list.', 'the-territory' ),
+        title: __( 'Basic List', 'bpbw' ),
+        description: __( 'Display a basic list.', 'bpbw' ),
         isDefault: true,
         icon: 'editor-ul',
         attributes: {
             className: 'basic',
-            placeholder: __( 'Add list items ...', 'the-territory' )
+            placeholder: __( 'Add list items ...', 'bpbw' )
         },
         example: {
             attributes: {
@@ -27,11 +27,11 @@ const variations = [
     },
     {
         name: 'bullet-list-columns',
-        title: __( 'Columned Bullet List', 'the-territory' ),
-        description: __( 'A list displayed in 2 columns.', 'the-territory' ),
+        title: __( 'Columned Bullet List', 'bpbw' ),
+        description: __( 'A list displayed in 2 columns.', 'bpbw' ),
         attributes: {
             className: 'bullet-list-columns',
-            placeholder: __( 'Add list items ...', 'the-territory' )
+            placeholder: __( 'Add list items ...', 'bpbw' )
         },
         icon: 'columns',
         scope: [
@@ -42,12 +42,12 @@ const variations = [
     },
     {
         name: 'bullet-list',
-        title: __( 'Bullet List', 'the-territory' ),
-        description: __( 'A regular list, with fancy bullets.', 'the-territory' ),
+        title: __( 'Bullet List', 'bpbw' ),
+        description: __( 'A regular list, with fancy bullets.', 'bpbw' ),
         icon: 'list-view',
         attributes: {
             className: 'bullet-list',
-            placeholder: __( 'Add list items ...', 'the-territory' )
+            placeholder: __( 'Add list items ...', 'bpbw' )
         },
         scope: [
             'transform'
@@ -57,12 +57,12 @@ const variations = [
     },
     {
         name: 'icon-list',
-        title: __( 'Icon List', 'the-territory' ),
-        description: __( 'A regular with icon.', 'the-territory' ),
+        title: __( 'Icon List', 'bpbw' ),
+        description: __( 'A regular with icon.', 'bpbw' ),
         icon: 'star-filled',
         attributes: {
             className: 'icon-list',
-            placeholder: __( 'Add list items ...', 'the-territory' )
+            placeholder: __( 'Add list items ...', 'bpbw' )
         },
         scope: [
             'transform'

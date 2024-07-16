@@ -4,13 +4,13 @@
  *
  * @see https://developer.wordpress.org/block-editor/how-to-guides/javascript/loading-javascript/
  *
- * @package The Territory
+ * @package BPBW
  */
-namespace The_Territory\Inc;
+namespace bpbw\Inc;
 
 function enqueue_block_editor_assets() {
 	\wp_enqueue_script(
-		'theterritory-editor-scripts',
+		bpbw-editor-scripts',
 		\get_stylesheet_directory_uri() . '/build/editor.js'
 	);
 }

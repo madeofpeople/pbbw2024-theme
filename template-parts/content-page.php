@@ -4,30 +4,22 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package The Territory
+ * @package BPBW
  */
 
 ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<!-- content page -->
 
-		<?php
-		if ( ! is_home() && ! is_front_page() ) :
-			?>
-			<header class="entry-header">
-				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-			</header><!-- .entry-header -->
-			<?php
-		endif;
-		?>
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 		<div class="entry-content">
 			<?php
-				the_territory_the_content( array( 'site-functionality/page-header' ) );
+				bpbw_the_content( array( 'site-functionality/page-header' ) );
 
 				wp_link_pages(
 					[
-						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the-territory' ),
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bpbw' ),
 						'after'  => '</div>',
 					]
 				);
@@ -40,7 +32,7 @@
 					edit_post_link(
 						sprintf(
 							/* translators: %s: Name of current post */
-							esc_html__( 'Edit %s', 'the-territory' ),
+							esc_html__( 'Edit %s', 'bpbw' ),
 							the_title( '<span class="screen-reader-text">"', '"</span>', false )
 						),
 						'<span class="edit-link">',

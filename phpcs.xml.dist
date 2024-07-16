@@ -6,26 +6,27 @@
 		 For most standard PHP configurations, this means the memory limit will temporarily be raised.
 		 Ref: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Advanced-Usage#specifying-phpini-settings
 	-->
-	<ini name="memory_limit" value="256M"/>
+	<ini name="memory_limit" value="256M" />
 
-	<!-- Whenever possible, cache the scan results and re-use those for unchanged files on the next scan. -->
-	<arg name="cache"/>
+	<!-- Whenever possible, cache the scan results and re-use those for unchanged files on the next
+	scan. -->
+	<arg name="cache" />
 
 	<!-- Strip the filepaths down to the relevant bit. -->
-	<arg name="basepath" value="./"/>
+	<arg name="basepath" value="./" />
 
 	<!-- Check up to 20 files simultaneously. -->
-	<arg name="parallel" value="20"/>
+	<arg name="parallel" value="20" />
 
 	<!-- Show sniff codes in all reports. -->
-	<arg value="ps"/>
+	<arg value="ps" />
 
 	<!-- Use WordPress "Extra" Coding Standards. -->
 	<rule ref="WordPress-Extra">
 		<!-- Allow array short syntax. -->
 		<exclude name="Generic.Arrays.DisallowShortArraySyntax" />
 		<!-- Allow short prefixes. -->
-		<exclude name="WordPress.NamingConventions.PrefixAllGlobals.ShortPrefixPassed"/>
+		<exclude name="WordPress.NamingConventions.PrefixAllGlobals.ShortPrefixPassed" />
 	</rule>
 
 	<!-- Use WordPress "Docs" Coding Standards. -->
@@ -34,14 +35,14 @@
 	<!-- The minimum supported WordPress version. This should match what's listed in style.css. -->
 	<rule ref="WordPress.WP.DeprecatedFunctions">
 		<properties>
-			<property name="minimum_supported_version" value="5.9"/>
+			<property name="minimum_supported_version" value="5.9" />
 		</properties>
 	</rule>
 
 	<!-- Allow for theme specific exceptions to the file name rules based on the theme hierarchy. -->
 	<rule ref="WordPress.Files.FileName">
 		<properties>
-			<property name="is_theme" value="true"/>
+			<property name="is_theme" value="true" />
 		</properties>
 	</rule>
 
@@ -49,7 +50,7 @@
 		 Multiple valid prefixes can be provided as a comma-delimited list. -->
 	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
 		<properties>
-			<property name="prefixes" type="array" value="the_territory" />
+			<property name="prefixes" type="array" value="bpbw" />
 		</properties>
 	</rule>
 
@@ -57,18 +58,18 @@
 		 Multiple valid text domains can be provided as a comma-delimited list. -->
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" type="array" value="the-territory"/>
+			<property name="text_domain" type="array" value="bpbw" />
 		</properties>
 	</rule>
 
 	<!-- Use WordPress PHP Compatibility. -->
-	<rule ref="PHPCompatibilityWP"/>
+	<rule ref="PHPCompatibilityWP" />
 
 	<!-- WordPress Core currently supports PHP 5.9+. -->
-	<config name="testVersion" value="5.9-"/>
+	<config name="testVersion" value="5.9-" />
 
 	<!-- Only sniff PHP files. -->
-	<arg name="extensions" value="php"/>
+	<arg name="extensions" value="php" />
 
 	<!-- Only sniff the theme. -->
 	<file>./</file>

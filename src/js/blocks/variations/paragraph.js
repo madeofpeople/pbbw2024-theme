@@ -4,23 +4,23 @@ import { __ } from '@wordpress/i18n';
 const variations = [
     {
         name: 'paragraph',
-        title: __( 'Paragraph', 'the-territory' ),
-        description: __( 'A standard paragraph.', 'the-territory' ),
+        title: __( 'Paragraph', 'bpbw' ),
+        description: __( 'A standard paragraph.', 'bpbw' ),
         isDefault: true,
         category: 'text',
         keywords: [
-            __( 'intro', 'the-territory' ),
-            __( 'paragraph', 'the-territory' ),
-            __( 'sentence', 'the-territory' )
+            __( 'intro', 'bpbw' ),
+            __( 'paragraph', 'bpbw' ),
+            __( 'sentence', 'bpbw' )
         ],
         icon: 'editor-alignleft',
         attributes: {
             className: 'ptag',
-            placeholder: __( 'Add content...', 'the-territory' )
+            placeholder: __( 'Add content...', 'bpbw' )
         },
         example: {
             attributes: {
-                content: __( 'This is a bock for displaying the opening paragraph, the big idea, the tl;dr.', 'the-territory' )
+                content: __( 'This is a bock for displaying the opening paragraph, the big idea, the tl;dr.', 'bpbw' )
             },
         },
         scope: [
@@ -31,12 +31,12 @@ const variations = [
     },
     {
         name: 'lede',
-        title: __( 'Lede', 'the-territory' ),
-        description: __( 'Add opening sentence or paragraph.', 'the-territory' ),
+        title: __( 'Lede', 'bpbw' ),
+        description: __( 'Add opening sentence or paragraph.', 'bpbw' ),
         icon: 'editor-justify',
         attributes: {
             className: 'lede',
-            placeholder: __( 'Add content...', 'the-territory' )
+            placeholder: __( 'Add content...', 'bpbw' )
         },
         scope: [
             'transform'

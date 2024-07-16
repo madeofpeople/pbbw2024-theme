@@ -4,14 +4,14 @@ import { __ } from '@wordpress/i18n';
 const variations = [
     {
         name: 'testimonial',
-        title: __( 'Testimonial', 'the-territory' ),
-        description: __('Large quote with background image.', 'the-territory'),
+        title: __( 'Testimonial', 'bpbw' ),
+        description: __('Large quote with background image.', 'bpbw'),
         category: 'media',
         icon: 'format-quote',
         keywords: [
-            __( 'quote', 'the-territory' ),
-            __( 'blockquote', 'the-territory' ),
-            __( 'callout', 'the-territory' )
+            __( 'quote', 'bpbw' ),
+            __( 'blockquote', 'bpbw' ),
+            __( 'callout', 'bpbw' )
         ],
         attributes: {
             className: 'testimonial',
@@ -60,17 +60,17 @@ const variations = [
                             name: 'core/quote',
                             attributes: {
                                 className: 'content',
-                                citation: __( 'Bitaté Uru-eu-wau-wau', 'the-territory' )
+                                citation: __( 'Bitaté Uru-eu-wau-wau', 'bpbw' )
                             },
                             innerBlocks: [
                                 {
                                     name: 'core/paragraph',
                                     attributes: {
-                                        content: __( '“historically, our existence has been marginalized and erased. through this film we\'re changing that.”', 'the-territory' ),
+                                        content: __( '“historically, our existence has been marginalized and erased. through this film we\'re changing that.”', 'bpbw' ),
                                     },
                                 },
                             ],
-        
+
                         }
                     ]
                 }

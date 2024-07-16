@@ -9,7 +9,17 @@ const initScrollSpy = () => {
 	let activeItem = null;
 
 	const updatePageNav = ( anEl ) => {
-		if ( anEl.tagName === 'SECTION' ) {
+		// console.log(
+		// 	'observedElements',
+		// 	observedElements,
+		// 	anEl.classList[ 0 ],
+		// 	Array.from( observedElements ).find( ( node ) => node === anEl )
+		// );
+		// is anEl, one of the observedElements?
+		if (
+			Array.from( observedElements ).find( ( node ) => node === anEl )
+		) {
+			// console.log( '»»»»»»', anEl );
 			if ( activeItem ) {
 				activeItem.classList.remove( 'active' );
 			}
@@ -18,9 +28,11 @@ const initScrollSpy = () => {
 				activeItem.classList.remove( 'active' );
 			}
 
-			activeItem = pageNav.querySelector(
-				`a[href="#${ anEl.querySelector( 'h2' ).id }"]`
-			);
+			if ( anEl.querySelector( 'h2' ) ) {
+				activeItem = pageNav.querySelector(
+					`a[href="#${ anEl.querySelector( 'h2' ).id }"]`
+				);
+			}
 
 			if ( activeItem ) activeItem.classList.add( 'active' );
 		}
@@ -31,20 +43,22 @@ const initScrollSpy = () => {
 			if ( entry.isIntersecting ) {
 				entry.target.classList.add( 'in-view' );
 				entry.target.classList.remove( 'out-of-view' );
+				console.log( '»»»»', entry.target.id, 'scrolled into view.' );
+
 				if ( pageNav ) updatePageNav( entry.target );
 			} else {
-				if ( entry.target.classList.contains( 'site-header' ) ) {
-					entry.target
-						.querySelector( '.nav--primary' )
-						.classList.add( 'alt-top' );
-				}
+				// if ( entry.target.classList.contains( 'site-header' ) ) {
+				// 	entry.target
+				// 		.querySelector( '.nav--primary' )
+				// 		.classList.add( 'alt-top' );
+				// }
 				entry.target.classList.remove( 'in-view' );
 				entry.target.classList.add( 'out-of-view' );
-				if ( entry.target.classList.contains( 'site-header' ) ) {
-					entry.target
-						.querySelector( '.nav--primary' )
-						.classList.remove( 'alt-top' );
-				}
+				// if ( entry.target.classList.contains( 'site-header' ) ) {
+				// 	entry.target
+				// 		.querySelector( '.nav--primary' )
+				// 		.classList.remove( 'alt-top' );
+				// }
 			}
 		} );
 	};

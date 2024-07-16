@@ -6,7 +6,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package The Territory
+ * @package BPBW
  */
 
 get_header(); ?>

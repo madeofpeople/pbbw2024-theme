@@ -1,5 +1,5 @@
 {
-	"name": "the-territory",
+	"name": "bpbw",
 	"version": "1.0.0",
 	"private": true,
 	"description": "A custom theme based on wd_s.",
@@ -8,7 +8,7 @@
 		"WordPress",
 		"Theme"
 	],
-	"homepage": "https://github.com/madeofpeople/the-territory-theme",
+	"homepage": "https://github.com/madeofpeople/bpbw-theme",
 	"engines": {
 		"node": ">=14",
 		"npm": ">=7"
@@ -66,7 +66,7 @@
 		"packages-update": "wp-scripts packages-update",
 		"postinstall": "composer install --quiet && npm run build",
 		"start": "cross-env NODE_ENV=development wp-scripts start",
-		"sync": "browser-sync start --https --proxy http://the-territory.test/ --no-open --files 'build/*.*, **/*.html, **/*.php, !node_modules/**/*.html'",
+		"sync": "browser-sync start --https --proxy http://bpbw.test/ --no-open --files 'build/*.*, **/*.html, **/*.php, !node_modules/**/*.html'",
 		"watch": "run-p start sync"
 	},
 	"dependencies": {

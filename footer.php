@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package The Territory
+ * @package BPBW
  */
 
 ?>
@@ -25,7 +25,7 @@
 			endif;
 			?>
 
-			<nav id="site-footer-navigation" class="footer-navigation navigation-menu" aria-label="<?php esc_attr_e( 'Footer Navigation', 'the-territory' ); ?>">
+			<nav id="site-footer-navigation" class="footer-navigation navigation-menu" aria-label="<?php esc_attr_e( 'Footer Navigation', 'bpbw' ); ?>">
 				<?php
 				wp_nav_menu(
 					array(
@@ -41,8 +41,8 @@
 			</nav><!-- #site-navigation-->
 
 			<div class="container site-info">
-				<?php the_territory_display_copyright_text(); ?>
-				<?php the_territory_display_social_network_links(); ?>
+				<?php bpbw_display_copyright_text(); ?>
+				<?php bpbw_display_social_network_links(); ?>
 			</div><!-- .site-info -->
 
 		</footer><!-- .site-footer container-->
@@ -53,6 +53,7 @@
 
 
 <?php $trp_langs = trp_custom_language_switcher();  ?>
+
 <div class="translate_menu" id="translate_menu">
 <!-- IMPORTANT! You need to have data-no-translation on the wrapper with the links or TranslatePress will automatically translate them in a secondary language. -->
 	<div class="layout_wrapper">
@@ -64,54 +65,18 @@
 				foreach ($trp_langs as $name => $item){
 					$post_slug = get_post_field( 'post_name', get_post() );
 					$item_url = $item['current_page_url'];
-					$current_is_urz = strpos($item_url, '/urz/');
 					$lang = get_locale();
-					if ( $post_slug == "urz" ) {
-						$post_slug = "";
-					}
-					$is_current = ($lang == $item['language_code'] && !$current_is_urz) ;
+					$is_current = ($lang == $item['language_code']) ;
 					$lang_name = $item['language_name'];
-					if ($item['language_code'] == "pt_BR") {
-						$lang_name = "Português";
-						$item_url = "/pt/" . $post_slug;
-					}
-
-					if ($current_is_urz) {
-						$item_url = str_replace('-urz', '', str_replace('/urz/', '/', $item_url));
-
 			?>
-						<li data-item-url="<?php echo $item_url; ?>" data-item-url="<?php echo $item_url; ?>" class="<?php echo $item['language_name']?> <?php if($is_current) echo 'current'; ?>" style="list-style-image: url(<?php echo $item['flag_link'] ?>)">
-							<a href="<?php echo $item_url; ?>">
-								<span><?php echo $lang_name;?></span>
-							</a>
-						</li>
+					<li class="<?php echo $item['language_name']?> <?php if($is_current) echo 'current'; ?>" style="list-style-image: url(<?php echo $item['flag_link'] ?>)">
+						<a href="<?php echo $item_url; ?>">
+							<span><?php echo $lang_name;?></span>
+						</a>
+					</li>
 			<?php
-					} else {
+				};
 			?>
-						<li class="<?php echo $item['language_name']?> <?php if($is_current) echo 'current'; ?>" style="list-style-image: url(<?php echo $item['flag_link'] ?>)">
-							<a href="<?php echo $item_url; ?>">
-								<span><?php echo $lang_name;?></span>
-							</a>
-						</li>
-			<?php
-					};
-				}
-			?>
-			<li class="urz <?php if($current_is_urz) echo 'current'; ?>">
-				<?php
-					// Here we handle some logic for the kawahiva link.
-					// It changes based on whether we're inside 'urz' or not.
-					// Also 'home', is just '/urz'
-					$post_slug = get_post_field( 'post_name', get_post() );
-
-					if ( $post_slug == 'home' || $post_slug == 'urz' ) {
-						$post_slug = '';
-					}
-				?>
-				<a href="<?php echo '/urz/' . $post_slug; ?>">
-					<span>Kawahiva</span>
-				</a>
-			</li>
 		</ul>
 	</div>
 </div>

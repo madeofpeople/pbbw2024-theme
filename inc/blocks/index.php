@@ -2,9 +2,9 @@
 /**
  * Register Block Patterns.
  *
- * @package The Territory
+ * @package BPBW
  */
-namespace The_Territory\Inc\Blocks;
+namespace bpbw\Inc\Blocks;
 
 function include_files() {
 	return array(
