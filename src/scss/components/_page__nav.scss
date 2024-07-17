@@ -52,10 +52,15 @@
 				border-radius: 0;
 			}
 		}
+
+	}
+
+	@media (min-width: bp(sm)) {
+		position: static;
 	}
 
 	&.out-of-view .page__nav {
-		position: fixed;
+		// position: fixed;
 		@include page__nav--small;
 		top: 4.5rem;
 		left: 0;

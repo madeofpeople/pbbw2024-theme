@@ -861,8 +861,12 @@ body.page section > .content {
 .site-header .page__nav .wp-block-button__link.active {
   border-radius: 0;
 }
+@media (min-width: 750px) {
+  .site-header {
+    position: static;
+  }
+}
 .site-header.out-of-view .page__nav {
-  position: fixed;
   z-index: 250;
   max-width: 1600px;
   width: 100%;
@@ -1131,7 +1135,6 @@ body.page section > .content {
 }
 
 .translate_menu {
-  position: fixed;
   box-sizing: border-box;
   top: 100vh;
   right: 3rem;
