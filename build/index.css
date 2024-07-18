@@ -1,7 +1,7 @@
 /*!************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/svg-transform-loader/encode-query.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/index.scss ***!
   \************************************************************************************************************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
 /*!****************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/svg-transform-loader/encode-query.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/index.scss (1) ***!
   \****************************************************************************************************************************************************************************************************************/
@@ -468,30 +468,118 @@ pre {
   width: calc(100vw - 8.1px);
 }
 
-@font-face {
-  font-family: dmsans;
-  font-weight: regular;
-  src: url(fonts/DMSans-Regular.woff2) format("woff2");
-  font-display: swap;
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
 }
-@font-face {
-  font-family: dmsans;
-  font-weight: regular;
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
   font-style: italic;
-  src: url(fonts/DMSans-Regular-Italic.woff2) format("woff2");
-  font-display: swap;
 }
-@font-face {
-  font-family: dmsans;
-  font-weight: bold;
-  src: url(fonts/DMSans-Bold.woff2) format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: dmsans;
-  font-weight: bold;
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
   font-style: italic;
-  src: url(fonts/DMSans-Bold-Italic.woff2) format("woff2");
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Edo";
+  font-weight: regular;
+  src: url(fonts/edosz.ttf) format("ttf");
   font-display: swap;
 }
 html,
@@ -507,6 +595,7 @@ h2,
 h3,
 h4,
 h5 {
+  font-family: "Poppins", sans-serif;
   line-height: 1.2;
 }
 
@@ -551,7 +640,7 @@ main {
 .error404 .page-title,
 body.page .page-title {
   font-size: 3.815rem;
-  font-family: "dmsans", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 800;
 }
 .error404 .entry-header,
@@ -559,12 +648,12 @@ body.page .entry-header {
   padding-left: 2.826875rem;
   padding-right: 2.826875rem;
   font-size: 3.815rem;
-  font-family: "dmsans", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 800;
 }
 .error404 .entry-header .entry-title,
 body.page .entry-header .entry-title {
-  font-family: "dmsans", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 800;
 }
 .error404 section > .content,
@@ -616,7 +705,7 @@ body.page section > .content {
 
 .btn-primary,
 .wp-block-button__link {
-  font-family: "dmsans", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 800;
   font-size: 1.563rem;
   border: none;
@@ -855,7 +944,7 @@ body.page section > .content {
   background: linear-gradient(0deg, rgb(34, 34, 34) 0%, rgba(34, 34, 34, 0) 100%);
 }
 .site-header .page__nav .wp-block-button__link {
-  font-family: "dmsans", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 800;
 }
 .site-header .page__nav .wp-block-button__link.active {
@@ -864,44 +953,6 @@ body.page section > .content {
 @media (min-width: 750px) {
   .site-header {
     position: static;
-  }
-}
-.site-header.out-of-view .page__nav {
-  z-index: 250;
-  max-width: 1600px;
-  width: 100%;
-  padding: 0;
-  gap: 0;
-  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
-  border: 1px #dedede solid;
-  top: 4.5rem;
-  left: 0;
-  height: 32px;
-}
-.site-header.out-of-view .page__nav .menu {
-  list-style: none;
-  padding: 0;
-}
-.site-header.out-of-view .page__nav .menu-item {
-  flex-grow: 1;
-}
-.site-header.out-of-view .page__nav .menu-item .wp-block-button__link {
-  display: block;
-  border: none;
-  font-size: 1.953rem;
-  padding: 0.353359375rem;
-}
-.site-header.out-of-view .page__nav .menu-item a {
-  font-family: "dmsans", sans-serif;
-  font-weight: 800;
-  font-size: 1.563rem !important;
-}
-@media (min-width: 900px) {
-  .site-header.out-of-view .page__nav {
-    top: 4.5rem;
-  }
-  .admin-bar .site-header.out-of-view .page__nav {
-    top: 6.5rem;
   }
 }
 .site-header .wp-block-cover__inner-container {
@@ -920,15 +971,6 @@ body.page section > .content {
   list-style: none;
   padding: 0;
 }
-.site-header .wp-block-cover__inner-container .page__nav .menu-item {
-  flex-grow: 1;
-}
-.site-header .wp-block-cover__inner-container .page__nav .menu-item .wp-block-button__link {
-  display: block;
-  border: none;
-  font-size: 1.953rem;
-  padding: 0.353359375rem;
-}
 
 .jarallax {
   position: relative;
@@ -937,8 +979,9 @@ body.page section > .content {
 
 .jarallax-img {
   position: absolute;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  min-height: 416px;
   top: 0;
   left: 0;
   width: 100%;
@@ -1083,7 +1126,7 @@ body.page section > .content {
   position: absolute;
   bottom: 1.4134375rem;
   color: var(--wp--preset--color--white);
-  font-family: "dmsans", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 800;
   font-size: 2.441rem;
   margin-bottom: 0;
@@ -1204,9 +1247,6 @@ body.page section > .content {
 .translate_menu .translation-list li.current {
   order: -1;
 }
-.translate_menu .translation-list li.urz {
-  list-style-image: url(images/kawahiva.png);
-}
 .translate_menu svg {
   width: 1.5rem;
 }
@@ -1215,19 +1255,6 @@ body.page section > .content {
 }
 .translate_menu.open .layout_wrapper {
   top: -7rem;
-}
-
-*[data-lang-kawahiva] {
-  display: none;
-}
-
-body.kawahiva .newsletter__content h3[data-lang-kawahiva],
-body.kawahiva .newsletter__content p[data-lang-kawahiva] {
-  display: block;
-}
-body.kawahiva .newsletter__content h3,
-body.kawahiva .newsletter__content p.default {
-  display: none;
 }
 
 body {

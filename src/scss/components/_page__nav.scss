@@ -12,15 +12,6 @@
 		list-style: none;
 		padding: 0;
 	}
-	.menu-item {
-		flex-grow: 1;
-		.wp-block-button__link {
-			display: block;
-			border: none;
-			font-size: map.get( $font-sizes, h4 );
-			padding: get-spacing( 0.125 );
-		}
-	}
 }
 
 .site-header {
@@ -59,26 +50,26 @@
 		position: static;
 	}
 
-	&.out-of-view .page__nav {
-		// position: fixed;
-		@include page__nav--small;
-		top: 4.5rem;
-		left: 0;
-		height: 32px;
-		.menu-item {
-			a {
-				@include display-font;
-				font-size: map.get( $font-sizes, h5 ) !important;
-			}
-		}
+	// &.out-of-view .page__nav {
+	// 	// position: fixed;
+	// 	@include page__nav--small;
+	// 	top: 4.5rem;
+	// 	left: 0;
+	// 	height: 32px;
+	// 	.menu-item {
+	// 		a {
+	// 			@include display-font;
+	// 			font-size: map.get( $font-sizes, h5 ) !important;
+	// 		}
+	// 	}
 
-		@media ( min-width: bp(md) ) {
-			top: 4.5rem;
-			.admin-bar & {
-				top: 6.5rem;
-			}
-		}
-	}
+	// 	@media ( min-width: bp(md) ) {
+	// 		top: 4.5rem;
+	// 		.admin-bar & {
+	// 			top: 6.5rem;
+	// 		}
+	// 	}
+	// }
 
 	.wp-block-cover__inner-container {
 		position: absolute;

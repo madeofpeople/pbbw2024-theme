@@ -5,7 +5,8 @@
 
 .jarallax-img {
 	position: absolute;
-	object-fit: cover;
+	object-fit: contain;
+	min-height: 416px;
 	top: 0;
 	left: 0;
 	width: 100%;

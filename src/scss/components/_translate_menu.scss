@@ -76,9 +76,6 @@
 			&.current {
 				order: -1;
 			}
-			&.urz {
-				list-style-image: url('../images/kawahiva.png');
-			}
 		}
 	}
 
@@ -93,24 +90,5 @@
 		.layout_wrapper {
 			top: -7rem;
 		}
-	}
-}
-
-*[data-lang-kawahiva] {
-	display: none;
-}
-body.kawahiva {
-	.newsletter__content {
-
-		h3[data-lang-kawahiva],
-		p[data-lang-kawahiva] {
-			display: block;
-		}
-
-		h3,
-		p.default {
-			display: none;
-		}
-
 	}
 }
