@@ -18,9 +18,10 @@
 	}
 
 	.nav--primary {
-		display: flex;
-		justify-content: space-between;
-		position: absolute;
+		border: solid 12px #054;
+		// display: flex;
+		// justify-content: space-between;
+		// position: absolute;
 		width: 100%;
 		z-index: 50;
 		padding-left: get-spacing( 0.5 );

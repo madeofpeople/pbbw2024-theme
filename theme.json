@@ -4,49 +4,39 @@
 		"color": {
 			"palette": [
 				{
-					"name": "Green",
-					"slug": "green",
-					"color": "#80AD6B"
+					"name": "Foreground",
+					"slug": "foreground",
+					"color": "#333"
 				},
 				{
-					"name": "Mid Green",
-					"slug": "green-mid",
-					"color": "#3F682B"
-				},
-				{
-					"name": "Dark Green",
-					"slug": "green-dark",
-					"color": "#2E462E"
-				},
-				{
-					"name": "Grey Dark",
-					"slug": "grey-dark",
-					"color": "#222"
-				},
-				{
-					"name": "Grey Light",
-					"slug": "grey-light",
-					"color": "#eee"
-				},
-				{
-					"name": "Grey Mid",
-					"slug": "grey-mid",
-					"color": "#777"
-				},
-				{
-					"name": "Grey Dark 60",
-					"slug": "grey-dark-60",
-					"color": "#222222aa"
-				},
-				{
-					"name": "Black",
-					"slug": "black",
-					"color": "#000"
-				},
-				{
-					"name": "White",
-					"slug": "white",
+					"name": "Background",
+					"slug": "background",
 					"color": "#fff"
+				},
+				{
+					"name": "Accent",
+					"slug": "accent",
+					"color": "#96CCCC"
+				},
+				{
+					"name": "Button",
+					"slug": "button",
+					"color": "#B8C2D4"
+				},
+				{
+					"name": "Text",
+					"slug": "text",
+					"color": "#333"
+				},
+				{
+					"name": "Heading",
+					"slug": "heading",
+					"color": "#4d5375"
+				},
+				{
+					"name": "Headline Inverse",
+					"slug": "headline-inverse",
+					"color": "#BFC485"
 				}
 			],
 			"background": true,
