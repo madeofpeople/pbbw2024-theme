@@ -16,8 +16,7 @@ module.exports = {
 	...defaultConfig,
 	entry: {
 		index: './src/index.js',
-		editor: [ './src/js/editor.js', './src/scss/editor.scss' ],
-		critical: './src/critical.js',
+		editor: [ './src/js/editor.js' ],
 		blocks: './src/js/blocks/index.js',
 	},
 	module: {

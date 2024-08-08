@@ -6,7 +6,9 @@
   */
 ?>
 
+
 <!-- wp:group {"tagName":"section","className":"section post-list news"} -->
+<!-- POST CAROUSEL -->
 <section class="wp-block-group section post-list news"><!-- wp:heading -->
     <h2><?php esc_html_e( 'In the News', 'bpbw' ); ?></h2>
     <!-- /wp:heading -->

@@ -41,16 +41,14 @@ function bpbw_setup() {
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
-	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'full-width', 1920, 1080, false );
+	add_theme_support( 'article-thumbnails' );
+	add_image_size( 'full-width', 200, 112	, true );
 
 	// Register navigation menus.
 	register_nav_menus(
 		array(
 			'primary' => esc_html__( 'Primary Menu', 'bpbw' ),
 			'footer'  => esc_html__( 'Footer Menu', 'bpbw' ),
-			'mobile'  => esc_html__( 'Mobile Menu', 'bpbw' ),
-			'kawahiva' => esc_html__( 'Kawahiva Menu', 'bpbw' ),
 		)
 	);
 
@@ -69,18 +67,6 @@ function bpbw_setup() {
 		)
 	);
 
-	// Custom logo support.
-	// add_theme_support(
-	// 	'custom-logo',
-	// 	array(
-	// 		'height'      => 55,
-	// 		'width'       => 180,
-	// 		'flex-height' => true,
-	// 		'flex-width'  => true,
-	// 		'header-text' => array( 'site-title', 'site-description' ),
-	// 	)
-	// );
-
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -90,7 +76,7 @@ function bpbw_setup() {
 
 	// Gutenberg editor styles support.
 	add_theme_support( 'editor-styles' );
-	add_editor_style( 'build/editor.css' );
+	add_editor_style( 'build/index.css' );
 
 	// Gutenberg responsive embed support.
 	add_theme_support( 'responsive-embeds' );

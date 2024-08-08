@@ -9,7 +9,7 @@
 	}
 
 	cite {
-		@include h5;
+		@include headings(h5);
 		font-style: normal;
 		&::before {
 			content: '—';

@@ -13,16 +13,6 @@
  */
 function bpbw_customize_sections( $wp_customize ) {
 
-	// Register additional scripts section.
-	// $wp_customize->add_section(
-	// 	'bpbw_additional_scripts_section',
-	// 	[
-	// 		'title'    => esc_html__( 'Additional Scripts', 'bpbw' ),
-	// 		'priority' => 10,
-	// 		'panel'    => 'site-options',
-	// 	]
-	// );
-
 	// Register a social links section.
 	$wp_customize->add_section(
 		'bpbw_social_links_section',
@@ -44,15 +34,6 @@ function bpbw_customize_sections( $wp_customize ) {
 		]
 	);
 
-	// Register a default images
-	$wp_customize->add_section(
-		'media_defaults',
-		[
-			'title'    => esc_html__( 'Default Media Settings', 'debtcollective' ),
-			'priority' => 10,
-			'panel'    => 'site-options',
-		]
-	);
 
 	// Register a footer section.
 	$wp_customize->add_section(

@@ -8,18 +8,16 @@
 		text-align: center;
 		margin: 0;
 		font-size: 18px;
-		font-family: $body-font;
 		text-transform: unset;
 		padding-top: 0.275rem;
 		line-height: 2;
-		@media ( min-width: bp(xs) ) {
-		}
 	}
+
 	a {
 		text-decoration: none;
 		display: block;
 		height: 100%;
-		color: white;
+		color: #fff;
 		vertical-align: middle;
 		&:focus,
 		&:hover {

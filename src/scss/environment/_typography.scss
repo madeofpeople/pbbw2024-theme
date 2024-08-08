@@ -2,142 +2,164 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+$font: poppins, sans-serif;
+$logo-font: edo, sans-serif;
+
+$font-sizes: (
+	'base': 16px,
+	'button': 16px,
+	'body': 0.875rem,
+	'h4': 18px,
+	'h3': 20px,
+	'h2': 34px,
+	'h1': 40px,
+	'lede': 18px,
+);
+
+$font-sizes--mobile: (
+	'base': 16px,
+	'button': 16px,
+	'body': 0.875rem,
+	'h4': 16px,
+	'h3': 18px,
+	'h2': 20px,
+	'h1': 34px,
+	'lede': 18px,
+);
+
+@mixin the-font {
+	font-family: $font;
+	line-height: 1.7;
+}
+
+@mixin headings($size: h2) {
+	font-size: map.get($font-sizes--mobile, $size);
+	@media (min-width: bp(sm)) {
+		font-size: map.get($font-sizes, $size);
+	}
+}
+
 .poppins-thin {
-font-family: "Poppins", sans-serif;
-font-weight: 100;
-font-style: normal;
+	@include the-font;
+	font-weight: 100;
+	font-style: normal;
 }
 
 .poppins-extralight {
-font-family: "Poppins", sans-serif;
-font-weight: 200;
-font-style: normal;
+	@include the-font;
+	font-weight: 200;
+	font-style: normal;
 }
 
 .poppins-light {
-font-family: "Poppins", sans-serif;
-font-weight: 300;
-font-style: normal;
+	@include the-font;
+	font-weight: 300;
+	font-style: normal;
 }
 
 .poppins-regular {
-font-family: "Poppins", sans-serif;
-font-weight: 400;
-font-style: normal;
+	@include the-font;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .poppins-medium {
-font-family: "Poppins", sans-serif;
-font-weight: 500;
-font-style: normal;
+	@include the-font;
+	font-weight: 500;
+	font-style: normal;
 }
 
 .poppins-semibold {
-font-family: "Poppins", sans-serif;
-font-weight: 600;
-font-style: normal;
+	@include the-font;
+	font-weight: 600;
+	font-style: normal;
 }
 
 .poppins-bold {
-font-family: "Poppins", sans-serif;
-font-weight: 700;
-font-style: normal;
+	@include the-font;
+	font-weight: 700;
+	font-style: normal;
 }
 
 .poppins-extrabold {
-font-family: "Poppins", sans-serif;
-font-weight: 800;
-font-style: normal;
+	@include the-font;
+	font-weight: 800;
+	font-style: normal;
 }
 
 .poppins-black {
-font-family: "Poppins", sans-serif;
-font-weight: 900;
-font-style: normal;
+	@include the-font;
+	font-weight: 900;
+	font-style: normal;
 }
 
 .poppins-thin-italic {
-font-family: "Poppins", sans-serif;
-font-weight: 100;
-font-style: italic;
+	@include the-font;
+	font-weight: 100;
+	font-style: italic;
 }
 
 .poppins-extralight-italic {
-font-family: "Poppins", sans-serif;
-font-weight: 200;
-font-style: italic;
+	@include the-font;
+	font-weight: 200;
+	font-style: italic;
 }
 
 .poppins-light-italic {
-font-family: "Poppins", sans-serif;
-font-weight: 300;
-font-style: italic;
+	@include the-font;
+	font-weight: 300;
+	font-style: italic;
 }
 
 .poppins-regular-italic {
-font-family: "Poppins", sans-serif;
-font-weight: 400;
-font-style: italic;
+	@include the-font;
+	font-weight: 400;
+	font-style: italic;
 }
 
 .poppins-medium-italic {
-font-family: "Poppins", sans-serif;
-font-weight: 500;
-font-style: italic;
+	@include the-font;
+	font-weight: 500;
+	font-style: italic;
 }
 
 .poppins-semibold-italic {
-font-family: "Poppins", sans-serif;
-font-weight: 600;
-font-style: italic;
+	@include the-font;
+	font-weight: 600;
+	font-style: italic;
 }
 
 .poppins-bold-italic {
-font-family: "Poppins", sans-serif;
-font-weight: 700;
-font-style: italic;
+	@include the-font;
+	font-weight: 700;
+	font-style: italic;
 }
 
 .poppins-extrabold-italic {
-font-family: "Poppins", sans-serif;
-font-weight: 800;
-font-style: italic;
+	@include the-font;
+	font-weight: 800;
+	font-style: italic;
 }
 
 .poppins-black-italic {
-font-family: "Poppins", sans-serif;
-font-weight: 900;
-font-style: italic;
+	@include the-font;
+	font-weight: 900;
+	font-style: italic;
 }
 
 @font-face {
-    font-family: 'Edo';
-	font-weight: regular;
+    font-family: Edo;
+	font-weight: 400;
     src: url('../fonts/edosz.ttf') format('ttf');
 	font-display: swap;
 }
 
-
-$font-sizes: (
-	'body': 1rem,
-	'h5': 1.563rem,
-	'h4': 1.953rem,
-	'h3': 2.441rem,
-	'h2': 3.052rem,
-	'h1': 3.815rem,
-	'lede': 1.2rem,
-	'huge': 4rem
-);
-
-$display-font: 'Poppins', sans-serif;
-$logo-font: 'Edo';
-$body-font: 'Source Sans Pro', sans-serif;
-
 html,
 body {
+	@include the-font;
+	color: color(body-text);
 	padding: 0;
 	margin: 0;
-    font-family: $body-font, sans-serif;
 	font-size: map.get($font-sizes, body);
 }
 
@@ -149,49 +171,62 @@ h2,
 h3,
 h4,
 h5 {
-	font-family: $display-font;
-	color: var(--wp--preset--color--heading);
+	@include the-font;
+	font-weight: 900;
+	color:  color(heading);
 	line-height: 1.2;
+	margin-bottom: 1em;
+
+	a {
+		color: color(heading);
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+		&:visited {
+			color: color(heading);
+		}
+	}
 }
 
 h1 {
-	font-size: map.get($font-sizes, h1);
+	@include headings(h1);
 }
 
 h2 {
-	font-size: map.get($font-sizes, h2);
+	@include headings(h2);
 }
 
 h3 {
-	font-size: map.get($font-sizes, h3);
+	@include headings(h3);
+}
+
+h4 {
+	@include headings(h4);
 }
 
 @mixin h2 {
-	font-size: map.get($font-sizes, h2);
-	line-height: 1.2;
+	@include headings(h2);
 }
 
 @mixin h3 {
-	font-size: map.get($font-sizes, h3);
-	line-height: 1.2;
+	@include headings(h3)
 }
 
 @mixin h4 {
-	font-size: map.get($font-sizes, h4);
-	line-height: 1.2;
+	@include headings(h4);
 }
 
-@mixin h5 {
-	font-size: map.get($font-sizes, h5);
-	line-height: 1.2;
-}
-
-@mixin display-font {
-	font-family: $display-font;
-	font-weight: 800;
+a {
+	color: color(text);
 }
 
 .lede {
 	font-size: map.get($font-sizes, lede);
 	max-width: 60em;
+}
+
+.inverse p {
+	color: color('background');
 }

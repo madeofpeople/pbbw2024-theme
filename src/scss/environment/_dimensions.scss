@@ -1,4 +1,4 @@
-$base: 2.826875rem;
+$base: 11px;
 
 @function get-spacing($multiplier: 1) {
     @return $multiplier * $base;

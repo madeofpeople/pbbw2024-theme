@@ -5,21 +5,17 @@ const options = {
 const initScrollSpy = () => {
 	const selectors = '.entry-content > section, .site-header';
 	const observedElements = document.querySelectorAll( selectors );
-	const pageNav = document.querySelector( '.site-header .page__nav' );
+	const pageNav = document.querySelector( '.site-header .navigation-menu' );
 	let activeItem = null;
 
 	const updatePageNav = ( anEl ) => {
 		// console.log(
-		// 	'observedElements',
-		// 	observedElements,
-		// 	anEl.classList[ 0 ],
 		// 	Array.from( observedElements ).find( ( node ) => node === anEl )
 		// );
 		// is anEl, one of the observedElements?
 		if (
 			Array.from( observedElements ).find( ( node ) => node === anEl )
 		) {
-			// console.log( '»»»»»»', anEl );
 			if ( activeItem ) {
 				activeItem.classList.remove( 'active' );
 			}
@@ -28,10 +24,10 @@ const initScrollSpy = () => {
 				activeItem.classList.remove( 'active' );
 			}
 
-			if ( anEl.querySelector( 'h2' ) ) {
-				activeItem = pageNav.querySelector(
-					`a[href="#${ anEl.querySelector( 'h2' ).id }"]`
-				);
+			const link = pageNav.querySelector( `a[href="/#${ anEl.id }"]` );
+
+			if ( link ) {
+				activeItem = link;
 			}
 
 			if ( activeItem ) activeItem.classList.add( 'active' );
@@ -43,22 +39,17 @@ const initScrollSpy = () => {
 			if ( entry.isIntersecting ) {
 				entry.target.classList.add( 'in-view' );
 				entry.target.classList.remove( 'out-of-view' );
-				console.log( '»»»»', entry.target.id, 'scrolled into view.' );
+				// console.log( '»»»»', entry.target.id, 'scrolled into view.' );
 
 				if ( pageNav ) updatePageNav( entry.target );
 			} else {
-				// if ( entry.target.classList.contains( 'site-header' ) ) {
-				// 	entry.target
-				// 		.querySelector( '.nav--primary' )
-				// 		.classList.add( 'alt-top' );
-				// }
+				if ( entry.target.classList.contains( 'site-header' ) ) {
+					entry.target
+						.querySelector( '.nav--primary' )
+						.classList.add( 'alt-top' );
+				}
 				entry.target.classList.remove( 'in-view' );
 				entry.target.classList.add( 'out-of-view' );
-				// if ( entry.target.classList.contains( 'site-header' ) ) {
-				// 	entry.target
-				// 		.querySelector( '.nav--primary' )
-				// 		.classList.remove( 'alt-top' );
-				// }
 			}
 		} );
 	};

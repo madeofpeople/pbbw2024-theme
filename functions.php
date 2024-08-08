@@ -30,3 +30,14 @@ function bpbw_get_theme_include_files() {
 foreach ( bpbw_get_theme_include_files() as $include ) {
 	require trailingslashit( get_template_directory() ) . $include;
 }
+
+
+function remove_block_style() {
+    // Register the block editor script.
+    wp_register_script( 'remove-block-style', get_stylesheet_directory_uri() . '/remove-block-styles.js', [ 'wp-blocks', 'wp-edit-post' ] );
+    // register block editor script.
+    register_block_type( 'remove/block-style', [
+        'editor_script' => 'remove-block-style',
+    ] );
+}
+add_action( 'init', 'remove_block_style' );

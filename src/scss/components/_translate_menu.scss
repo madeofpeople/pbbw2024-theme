@@ -3,7 +3,7 @@
 }
 
 .translate_menu {
-	// position: fixed;
+	position: fixed;
 	box-sizing: border-box;
 	top: 100vh;
 	right: 3rem;
@@ -46,35 +46,32 @@
 		box-sizing: border-box;
 		background-color: color('black');
 		margin: 0;
-		padding: 0;
-		padding-top: 0.5rem;
-		padding-bottom: 3rem;
+		padding: 0 0 3rem 0;
 		border-top-right-radius: 3px;
-		list-style-position: outside;
-		padding-left: 2.5rem;
-		display: grid;
-		gap: 0;
+		list-style: none;
 
 		li {
 			white-space: nowrap;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
 			a {
+				color: #999;
 				display: block;
-				padding: 0.5rem;
-				padding-top: 0.25rem;
-				padding-bottom: 0.325rem;
-				padding-right: 1rem;
+				padding: 0.5rem 2rem 0.5rem;
 				text-decoration: none;
 				&:hover {
 					background-color: #333;
-				}
-			}
-			&.current {
-				a {
-					color: #fff;
+					color: #dedede;
 				}
 			}
 			&.current {
 				order: -1;
+				a {
+					color: #fff;
+					font-weight: 700;
+				}
 			}
 		}
 	}
@@ -82,7 +79,7 @@
 	svg {
 		width: 1.5rem;
 		path {
-			fill: color('white');
+			fill: #fff;
 		}
 	}
 

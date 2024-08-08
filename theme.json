@@ -24,8 +24,8 @@
 					"color": "#B8C2D4"
 				},
 				{
-					"name": "Text",
-					"slug": "text",
+					"name": "Body Text",
+					"slug": "body-text",
 					"color": "#333"
 				},
 				{
@@ -50,7 +50,7 @@
 			"gradients": [],
 			"link": false
 		},
-		"appearanceTools": false,
+		"appearanceTools": true,
 		"border": {
 			"color": false,
 			"radius": false,
@@ -75,17 +75,18 @@
 			"customFontSize": false,
 			"fontFamilies": [
 				{
-					"fontFamily": "Pragmatica, sans-serif",
-					"slug": "heading-secondary",
-					"name": "Secondary Heading"
+					"fontFamily": "Poppins, sans-serif",
+					"slug": "poppins",
+					"name": "Poppins"
 				},
 				{
-					"fontFamily": "Source Sans Pro, sans-serif",
-					"slug": "body",
-					"name": "Body"
+					"fontFamily": "Edo, sans-serif",
+					"slug": "edo",
+					"name": "Edo"
 				}
 			],
 			"fontSizes": [],
+			"color": {},
 			"fontStyle": true,
 			"fontWeight": false,
 			"letterSpacing": false,
@@ -93,6 +94,14 @@
 			"textDecoration": false
 		},
 		"blocks": {
+
+			"core/image": {
+				"background": {},
+				"styles": []
+			},
+			"core/heading": {
+				"color": {}
+			},
 			"core/button": {
 				"border": {
 					"radius": false

@@ -7,6 +7,7 @@
 ?>
 
 <!-- wp:group {"className":"signup"} -->
+<!-- COMPONENT SIGNUP -->
 <div class="wp-block-group signup">
     <!-- wp:heading -->
     <h2><?php esc_html_e( 'Let\'s Work Together', 'bpbw' ); ?></h2>

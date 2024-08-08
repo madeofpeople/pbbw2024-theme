@@ -13,7 +13,7 @@ if (
 const jarallaxParams = {
 	type: 'scroll',
 	speed: 0.85,
-	imgSize: 'cover',
+	imgSize: 'fit',
 	imgPosition: '50% 50%',
 };
 

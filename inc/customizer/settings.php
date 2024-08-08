@@ -13,45 +13,6 @@
  * @param WP_Customize_Manager $wp_customize Instance of WP_Customize_Manager.
  */
 function bpbw_customize_additional_scripts( $wp_customize ) {
-	// Register a setting.
-	// $wp_customize->add_setting(
-	// 'bpbw_header_scripts',
-	// [
-	// 'default'           => '',
-	// 'sanitize_callback' => 'force_balance_tags',
-	// ]
-	// );
-
-	// Create the setting field.
-	// $wp_customize->add_control(
-	// 'bpbw_header_scripts',
-	// [
-	// 'label'       => esc_attr__( 'Header Scripts', 'bpbw' ),
-	// 'description' => esc_attr__( 'Additional scripts to add to the header. Basic HTML tags are allowed.', 'bpbw' ),
-	// 'section'     => 'bpbw_additional_scripts_section',
-	// 'type'        => 'textarea',
-	// ]
-	// );
-
-	// Register a setting.
-	// $wp_customize->add_setting(
-	// 'bpbw_footer_scripts',
-	// [
-	// 'default'           => '',
-	// 'sanitize_callback' => 'force_balance_tags',
-	// ]
-	// );
-
-	// Create the setting field.
-	// $wp_customize->add_control(
-	// 'bpbw_footer_scripts',
-	// [
-	// 'label'       => esc_attr__( 'Footer Scripts', 'bpbw' ),
-	// 'description' => esc_attr__( 'Additional scripts to add to the footer. Basic HTML tags are allowed.', 'bpbw' ),
-	// 'section'     => 'bpbw_additional_scripts_section',
-	// 'type'        => 'textarea',
-	// ]
-	// );
 
 	$wp_customize->add_setting(
 		'default_featured_image',
@@ -59,19 +20,6 @@ function bpbw_customize_additional_scripts( $wp_customize ) {
 			'default'   => '',
 			'transport' => 'refresh',
 			'type'      => 'option',
-		)
-	);
-
-	$wp_customize->add_control(
-		new \WP_Customize_Image_Control(
-			$wp_customize,
-			'default_featured_image',
-			array(
-				'label'       => esc_html__( 'Add a default post image', 'debtcollective' ),
-				'description' => esc_html__( 'Page header image to display if a featured image isn\'t supplied.', 'debtcollective' ),
-				'section'     => 'media_defaults',
-				'settings'    => 'default_featured_image',
-			)
 		)
 	);
 
