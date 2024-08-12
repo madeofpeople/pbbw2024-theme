@@ -42,7 +42,8 @@ function bpbw_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'article-thumbnails' );
-	add_image_size( 'full-width', 200, 112	, true );
+	add_image_size( 'full-width', 200, 112, true );
+	add_image_size( 'partner-logo', 400, 400, true );
 
 	// Register navigation menus.
 	register_nav_menus(

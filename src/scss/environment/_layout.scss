@@ -65,7 +65,6 @@ $space: get-spacing();
 			text-decoration: underline;
 		}
 	}
-
 }
 
 main {
@@ -145,6 +144,30 @@ h2.has-background-color {
 			padding: get-spacing(3);
 		}
 
+		.wp-block-cover {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: first baseline;
+		}
+
+		.wp-block-cover__inner-container {
+			display: flex;
+			flex-direction: column;
+			justify-content:  flex-start;
+			align-items: first baseline;
+
+			.wp-block-heading {
+				margin-top: 0;
+				text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+				margin-bottom: 0;
+			}
+
+			p {
+				max-width: 42%;
+			}
+		}
+
 		@media screen and (min-width: bp(md) ) {
 
 			> .wp-block-column > div {
@@ -153,33 +176,11 @@ h2.has-background-color {
 			}
 		}
 	}
-
-	.wp-block-site-functionality-linked-article {
-		position: relative;
-		.tout__image {
-			float: left;
-			margin-right:2rem;
-		}
-
-		.wp-block-heading {
-			font-size: map.get( $font-sizes, h2 );
-			margin-top: 0;
-			margin-bottom: 0;
-		}
-
-		@media screen and (min-width: bp(md) ) {
-			.content-wrapper {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				width: 45vw;
-				transform: translate3d(-50%, -50%, 0);
-			}
-		}
-	}
 }
 
 .partners {
+
+	margin: get-spacing(3) get-spacing(2);
 
 	.content:first-of-type {
 
@@ -190,7 +191,6 @@ h2.has-background-color {
 
 		@media screen and (min-width: bp(xs)) {
 			grid-template-columns: 1fr 1fr 1fr;
-
 		}
 
 		@media screen and (min-width: bp(sm)) {
@@ -231,8 +231,9 @@ h2.has-background-color {
 	}
 
 	.partner-links {
-		max-width: 70%;
+
 		margin: 0 auto;
+
 		a {
 			display: inline-block;
 			padding: 0.25em 0.5em;
@@ -242,6 +243,10 @@ h2.has-background-color {
 				background-color: color(body-text);
 				color: color(background);
 			}
+		}
+
+		@media screen and (min-width: bp(sm)) {
+			max-width: 70%;
 		}
 	}
 }
@@ -256,6 +261,7 @@ section.scroll {
 section.how-you-can-help .an-block,
 section.data .data-block {
 
+	padding: get-spacing(3) get-spacing(2);
 	padding-top: 2rem;
 	padding-bottom: 4rem;
 	text-align: center;
@@ -314,7 +320,6 @@ section.data .data-block {
 				transition-timing-function: ease-out;
 				border: 1px transparent solid;
 				border-radius: 50%;
-
 			}
 		}
 
@@ -333,5 +338,10 @@ section.data .data-block {
 }
 
 .page__header .wp-block-cover__image-background.jarallax-img {
-	object-fit: fill !important;
+	object-fit: fill;
+}
+
+.svg-sprite-wrapper {
+	position: fixed;
+	top: 100vh;
 }

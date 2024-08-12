@@ -14,7 +14,6 @@
 		<?php do_action( 'before_footer' ); ?>
 
 		<footer class="site-footer">
-
 			<?php
 			if ( is_active_sidebar( 'footer' ) ) :
 				?>
@@ -24,21 +23,6 @@
 				<?php
 			endif;
 			?>
-
-			<nav id="site-footer-navigation" class="footer-navigation navigation-menu" aria-label="<?php esc_attr_e( 'Footer Navigation', 'bpbw' ); ?>">
-				<?php
-				wp_nav_menu(
-					array(
-						'fallback_cb'    => false,
-						'theme_location' => 'footer',
-						'menu_id'        => 'footer-menu',
-						'menu_class'     => 'menu container',
-						'container'      => false,
-						'depth'          => 1,
-					)
-				);
-				?>
-			</nav><!-- #site-navigation-->
 
 			<div class="container site-info">
 				<?php bpbw_display_copyright_text(); ?>

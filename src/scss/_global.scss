@@ -4,7 +4,6 @@
 @import 'environment/typography';
 @import 'environment/a11y';
 @import 'environment/layout';
-@import 'environment/shop';
 
 @import 'components/button';
 @import 'components/social-grid';
@@ -37,8 +36,8 @@
 %grid-three {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-row-gap: get-spacing(1);
-	grid-column-gap: get-spacing(1);
+	grid-row-gap: get-spacing(2);
+	grid-column-gap: get-spacing(2);
 
 	@media ( min-width: bp(xs) ) {
 		grid-template-columns: 1fr 1fr;

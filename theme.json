@@ -1,6 +1,25 @@
 {
-	"version": 2,
+	"version": 3,
 	"settings": {
+	"dimensions": {
+			"aspectRatios": [
+				{
+					"name": "Square - 1:1",
+					"slug": "1-1",
+					"ratio": "1/1"
+				},
+				{
+					"name": "Extra Wide - 2:1",
+					"slug": "2-1",
+					"ratio": "2/1"
+				},
+				{
+					"name": "Cinema - 21:9",
+					"slug": "21-9",
+					"ratio": "21/9"
+				}
+			]
+		},
 		"color": {
 			"palette": [
 				{
@@ -50,6 +69,7 @@
 			"gradients": [],
 			"link": false
 		},
+
 		"appearanceTools": true,
 		"border": {
 			"color": false,
@@ -96,8 +116,7 @@
 		"blocks": {
 
 			"core/image": {
-				"background": {},
-				"styles": []
+				"background": {}
 			},
 			"core/heading": {
 				"color": {}

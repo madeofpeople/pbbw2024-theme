@@ -20,4 +20,15 @@
 		background-color: color(heading);
 		color: color(button);
 	}
+
+	.inverse & {
+
+		background-color: color(heading);
+		color: color(button);
+
+		&:hover, &:focus {
+			color: color(heading);
+			background-color: color(button);
+		}
+	}
 }
