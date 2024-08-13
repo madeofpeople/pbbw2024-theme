@@ -277,11 +277,19 @@ section.scroll {
 	}
 }
 
+section.how-you-can-help {
+	.data-block {
+		padding: get-spacing( 3 ) get-spacing( 2 );
+	}
+
+	.actions {
+		padding-bottom: get-spacing( 3 );
+	}
+}
+
 section.how-you-can-help .an-block,
 section.data .data-block {
-	padding: get-spacing( 3 ) get-spacing( 2 );
 	padding-top: 2rem;
-	padding-bottom: 4rem;
 	text-align: center;
 
 	h2 a,
