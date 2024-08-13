@@ -149,6 +149,13 @@ h2.has-background-color {
 			flex-direction: column;
 			justify-content: flex-start;
 			align-items: first baseline;
+			@media screen and (min-width: bp(md) ) {
+
+				> .wp-block-column > div {
+					min-height: 490px;
+					padding: get-spacing(3);
+				}
+			}
 		}
 
 		.wp-block-cover__inner-container {
@@ -165,14 +172,6 @@ h2.has-background-color {
 
 			p {
 				max-width: 42%;
-			}
-		}
-
-		@media screen and (min-width: bp(md) ) {
-
-			> .wp-block-column > div {
-				min-height: 490px;
-				padding: get-spacing(3);
 			}
 		}
 	}
@@ -330,7 +329,7 @@ section.data .data-block {
 		.wp-block-heading {
 			display: inline-block;
 			vertical-align: middle;
-			line-height: 100px;
+			line-height: 1;
 			height: 100%;
 			margin: 0;
 		}
