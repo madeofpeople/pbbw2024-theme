@@ -140,21 +140,16 @@ h2.has-background-color {
 
 		padding: 0;
 
-		> .wp-block-column > div {
-			padding: get-spacing(3);
-		}
 
 		.wp-block-cover {
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-start;
 			align-items: first baseline;
+			padding: get-spacing(3);
 			@media screen and (min-width: bp(md) ) {
-
-				> .wp-block-column > div {
-					min-height: 490px;
-					padding: get-spacing(3);
-				}
+				min-height: 490px;
+				padding: get-spacing(3);
 			}
 		}
 
