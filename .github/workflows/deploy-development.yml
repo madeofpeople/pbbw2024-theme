@@ -17,5 +17,5 @@ jobs:
           SOURCE: "./"
           REMOTE_HOST: ${{ secrets.SSH_HOST }}
           REMOTE_USER: ${{ secrets.SSH_USER }}
-          TARGET: "/home/pbooks/dev.prisonbannedbooksweek.org/web/wp-content/themes/pbbw2024-theme/"
+          TARGET: ${{ secrets.REMOTE_TARGET }}
           EXCLUDE: ".DS_Store,.*,*lock,*~,phpcs.xml.dist,postcss.config.js,webpack.*.js,.*/,node_modules/"
