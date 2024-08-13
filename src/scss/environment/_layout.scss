@@ -116,6 +116,15 @@ h2.has-background-color {
 	color: color('background');
 }
 
+.page__header {
+	.wp-block-cover {
+		.wp-block-cover__image-background {
+			object-fit: none;
+			top: 24px;
+		}
+	}
+}
+
 .how-you-can-help {
 
 	background-color: color(body-text);
@@ -331,9 +340,6 @@ section.data .data-block {
 	}
 }
 
-.page__header .wp-block-cover__image-background.jarallax-img {
-	object-fit: fill;
-}
 
 .svg-sprite-wrapper {
 	position: fixed;
