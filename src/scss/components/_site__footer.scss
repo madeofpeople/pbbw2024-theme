@@ -4,13 +4,23 @@
 .site-footer {
 	background: #000;
 	color: color( 'background' );
-	padding-bottom: 2rem;
+	padding-bottom: get-spacing();
 }
 
 .wp-block-social-links {
 	margin-top: 0;
 	margin-bottom: 0;
-	padding: get-spacing( 4 );
+	padding: get-spacing( 3 ) get-spacing( 2 ) get-spacing() get-spacing( 2 );
 	display: flex;
 	justify-content: flex-end;
+
+	.wp-social-link {
+		background-color: color( body-text );
+	}
+
+	.wp-block-social-link-anchor {
+		svg {
+			fill: color( background );
+		}
+	}
 }

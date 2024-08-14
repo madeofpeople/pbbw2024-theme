@@ -39,7 +39,7 @@ const initScrollSpy = () => {
 			if ( entry.isIntersecting ) {
 				entry.target.classList.add( 'in-view' );
 				entry.target.classList.remove( 'out-of-view' );
-				// console.log( '»»»»', entry.target.id, 'scrolled into view.' );
+				console.log( '»»»»', entry.target.id, 'scrolled into view.' );
 
 				if ( pageNav ) updatePageNav( entry.target );
 			} else {

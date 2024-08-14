@@ -14,11 +14,8 @@
 
 	a {
 		display: block;
-		color: color('grey-mid');
+		color: color( 'grey-mid' );
 		font-size: 0.925rem;
-		&:hover {
-			color: color('grey-light');
-		}
 	}
 
 	.layout_wrapper {
@@ -26,7 +23,7 @@
 		top: 0;
 		transition-property: top;
 		transition-duration: 250ms;
-		transition-timing-function: ease-out;;
+		transition-timing-function: ease-out;
 	}
 
 	.open-lang-menu {
@@ -34,7 +31,7 @@
 		display: block;
 		position: absolute;
 		top: -2.5rem;
-		background-color: color('black');
+		background-color: #dedede;
 		border-top-right-radius: 3px;
 		border-top-left-radius: 3px;
 		width: 3.5rem;
@@ -44,9 +41,9 @@
 
 	.translation-list {
 		box-sizing: border-box;
-		background-color: color('black');
+		background-color: #dedede;
 		margin: 0;
-		padding: 0 0 3rem 0;
+		padding: 0 0 0 0;
 		border-top-right-radius: 3px;
 		list-style: none;
 
@@ -57,19 +54,21 @@
 			margin: 0;
 
 			a {
-				color: #999;
+				color: #333;
 				display: block;
 				padding: 0.5rem 2rem 0.5rem;
 				text-decoration: none;
+
 				&:hover {
-					background-color: #333;
-					color: #dedede;
+					background-color: #999;
+					color: #000;
 				}
 			}
+
 			&.current {
 				order: -1;
 				a {
-					color: #fff;
+					color: #333;
 					font-weight: 700;
 				}
 			}
@@ -79,13 +78,13 @@
 	svg {
 		width: 1.5rem;
 		path {
-			fill: #fff;
+			fill: #333;
 		}
 	}
 
 	&.open {
 		.layout_wrapper {
-			top: -7rem;
+			top: -5rem;
 		}
 	}
 }

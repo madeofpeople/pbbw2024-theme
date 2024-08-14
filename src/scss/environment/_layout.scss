@@ -290,7 +290,7 @@ section.how-you-can-help {
 section.how-you-can-help .an-block,
 section.data .data-block {
 	padding-top: 2rem;
-	text-align: center;
+	text-align: left;
 
 	h2 a,
 	h2 {
@@ -300,7 +300,7 @@ section.data .data-block {
 	.wp-block-buttons {
 		.wp-block-button {
 			display: inline-block;
-			margin: 0 auto;
+			margin: get-spacing( 2 ) auto;
 		}
 		.wp-block-button__link {
 			margin: 0 auto;
