@@ -51,7 +51,7 @@
 					$item_url = $item['current_page_url'];
 					$lang = get_locale();
 					$is_current = ($lang == $item['language_code']) ;
-					$lang_name = $item['language_name'];
+					$lang_name = $item['short_language_name'];
 			?>
 					<li class="<?php echo $item['language_name']?> <?php if($is_current) echo 'current'; ?>">
 						<a href="<?php echo $item_url; ?>">
