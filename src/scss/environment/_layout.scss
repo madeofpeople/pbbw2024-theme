@@ -135,7 +135,7 @@ h2.has-background-color {
 		.shop-tout-column {
 			max-height: 240px;
 			.wp-block-cover.shop-tout {
-				min-height: auto;
+				min-height: auto !important;
 				max-height: 280px;
 				object-fit: contain;
 				object-position: top;
