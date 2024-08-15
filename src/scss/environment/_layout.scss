@@ -103,13 +103,6 @@ body.page {
 	}
 }
 
-// .body-open,
-// .svg-sprite-wrapper {
-// 	position: fixed;
-// 	top: 0;
-// 	left: -100vw;
-// }
-
 h3.has-background-color,
 h2.has-background-color {
 	color: color( 'background' );
@@ -128,22 +121,32 @@ h2.has-background-color {
 .how-you-can-help {
 	background-color: color( body-text );
 
+	.actions {
+		padding-bottom: get-spacing( 3 );
+	}
+
 	.wp-block-columns {
 		max-width: 1500px;
 		margin: 0 auto;
 		column-gap: 0;
 		row-gap: 0;
 		margin-bottom: 0;
+
+		.shop-tout-column {
+			max-height: 240px;
+			.wp-block-cover.shop-tout {
+				min-height: auto;
+				max-height: 280px;
+				object-fit: contain;
+				object-position: top;
+			}
+		}
 	}
 
-	.cols {
+	.wp-block-columns {
 		padding: 0;
 		gap: 0;
-
-		@media screen and ( min-width: bp(sm) ) {
-			height: $tout-height;
-			overflow: hidden;
-		}
+		overflow: hidden;
 
 		.wp-block-cover {
 			display: flex;
@@ -151,10 +154,22 @@ h2.has-background-color {
 			justify-content: flex-start;
 			align-items: first baseline;
 			padding: get-spacing( 3 );
+		}
 
-			@media screen and ( min-width: bp(sm) ) {
+		@media screen and ( min-width: bp(sm) ) {
+			max-height: auto;
+			height: $tout-height;
+			.wp-block-cover {
+				max-height: auto;
 				height: $tout-height;
 				padding: get-spacing( 3 );
+				object-fit: cover;
+			}
+			.shop-tout {
+				min-height: auto;
+				max-height: auto;
+				object-fit: cover;
+				object-position: center;
 			}
 		}
 
@@ -227,7 +242,7 @@ h2.has-background-color {
 	}
 
 	.partner-links {
-		margin: 0;
+		margin: 0 0 get-spacing( 2 ) 0;
 		padding: 0;
 		list-style: none;
 		display: flex;
@@ -256,6 +271,7 @@ h2.has-background-color {
 			display: block;
 			padding: 0.25em 0.5em;
 			text-decoration: none;
+			text-align: center;
 
 			&:hover {
 				background-color: color( body-text );
@@ -269,16 +285,6 @@ section.scroll {
 	.wp-block-image {
 		max-width: 370px;
 		height: auto;
-	}
-}
-
-section.how-you-can-help {
-	.data-block {
-		padding: get-spacing( 3 ) get-spacing( 2 );
-	}
-
-	.actions {
-		padding-bottom: get-spacing( 3 );
 	}
 }
 
@@ -374,4 +380,21 @@ section.data .data-block {
 .svg-sprite-wrapper {
 	position: fixed;
 	top: 100vh;
+}
+
+#actions {
+	figure:first-of-type {
+		margin-bottom: 0;
+	}
+	.wp-block-button:first-of-type {
+		margin-top: 0;
+	}
+}
+
+#about,
+#articles,
+#action,
+#partners,
+#data {
+	scroll-margin-top: 100px;
 }
