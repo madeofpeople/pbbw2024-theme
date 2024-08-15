@@ -77,8 +77,6 @@ main {
 	.page {
 		> .entry-content {
 			> section {
-				margin: 0 auto;
-
 				> .content {
 					padding: get-spacing( 2 );
 					@media screen and ( min-width: bp(sm) ) {
@@ -131,21 +129,7 @@ h2.has-background-color {
 		column-gap: 0;
 		row-gap: 0;
 		margin-bottom: 0;
-
-		.shop-tout-column {
-			max-height: 240px;
-			.wp-block-cover.shop-tout {
-				min-height: auto !important;
-				max-height: 280px;
-				object-fit: contain;
-				object-position: top;
-			}
-		}
-	}
-
-	.wp-block-columns {
 		padding: 0;
-		gap: 0;
 		overflow: hidden;
 
 		.wp-block-cover {
@@ -156,18 +140,34 @@ h2.has-background-color {
 			padding: get-spacing( 3 );
 		}
 
+		@media screen and ( max-width: bp(sm) ) {
+			// specific styles for the shop tout on mobile
+			.shop-tout-column {
+				max-height: 280px;
+
+				.wp-block-cover.shop-tout {
+					min-height: auto;
+					max-height: 280px;
+					height: 280px;
+					object-fit: contain;
+					object-position: top;
+				}
+			}
+		}
+
 		@media screen and ( min-width: bp(sm) ) {
-			max-height: auto;
-			height: $tout-height;
 			.wp-block-cover {
-				max-height: auto;
+				max-height: $tout-height;
+				min-height: $tout-height;
 				height: $tout-height;
 				padding: get-spacing( 3 );
 				object-fit: cover;
 			}
-			.shop-tout {
-				min-height: auto;
-				max-height: auto;
+
+			.wp-block-cover.shop-tout {
+				max-height: $tout-height !important;
+				min-height: $tout-height !important;
+				height: $tout-height !important;
 				object-fit: cover;
 				object-position: center;
 			}
@@ -253,6 +253,7 @@ h2.has-background-color {
 			display: inline-block;
 			position: relative;
 			margin-right: 0.75rem;
+
 			&::after {
 				content: '|';
 				display: inline-block;
@@ -261,6 +262,7 @@ h2.has-background-color {
 				position: absolute;
 				top: 0.25rem;
 				right: -0.75rem;
+
 				&:last-of-type::after {
 					content: '';
 				}
@@ -303,6 +305,7 @@ section.data .data-block {
 			display: inline-block;
 			margin: get-spacing( 2 ) auto;
 		}
+
 		.wp-block-button__link {
 			margin: 0 auto;
 		}
@@ -348,7 +351,6 @@ section.data .data-block {
 				transition-property: transform, border-width;
 				transition-duration: 0.2s;
 				transition-timing-function: ease-out;
-				border: 1px transparent solid;
 				border-radius: 50%;
 				border: 8px color( accent ) solid;
 			}
@@ -386,6 +388,7 @@ section.data .data-block {
 	figure:first-of-type {
 		margin-bottom: 0;
 	}
+
 	.wp-block-button:first-of-type {
 		margin-top: 0;
 	}
