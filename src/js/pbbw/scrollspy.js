@@ -1,25 +1,22 @@
-const options = {
-	threshold: 0.24,
-};
-
 const initScrollSpy = () => {
 	const selectors = '.entry-content > section, .site-header';
 	const observedElements = document.querySelectorAll( selectors );
+	const options = {
+		threshold: 0.24,
+		root: Window.visualViewport,
+	};
+
 	const pageNav = document.querySelector( '.site-header .navigation-menu' );
 	let activeItem = null;
 
 	const updatePageNav = ( anEl ) => {
-		// console.log(
-		// 	Array.from( observedElements ).find( ( node ) => node === anEl )
-		// );
+		console.log(
+			Array.from( observedElements ).find( ( node ) => node === anEl )
+		);
 		// is anEl, one of the observedElements?
 		if (
 			Array.from( observedElements ).find( ( node ) => node === anEl )
 		) {
-			if ( activeItem ) {
-				activeItem.classList.remove( 'active' );
-			}
-
 			if ( activeItem ) {
 				activeItem.classList.remove( 'active' );
 			}
@@ -55,6 +52,7 @@ const initScrollSpy = () => {
 	};
 
 	const observer = new IntersectionObserver( inViewCallback, options );
+	//console.log( '::::', observer );
 	observedElements.forEach( ( element ) => {
 		const dataDelay = element.getAttribute( 'data-delay' );
 		element.classList.add( 'out-of-view' );
@@ -68,13 +66,9 @@ if (
 		'loading' !== document.readyState ) &&
 	! document.documentElement.doScroll
 ) {
-	if ( ! document.body.classList.contains( 'is-mobile' ) ) {
-		initScrollSpy();
-	}
+	initScrollSpy();
 } else {
 	document.addEventListener( 'DOMContentLoaded', function () {
-		if ( ! document.body.classList.contains( 'is-mobile' ) ) {
-			initScrollSpy();
-		}
+		initScrollSpy();
 	} );
 }

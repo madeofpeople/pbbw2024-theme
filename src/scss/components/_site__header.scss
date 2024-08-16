@@ -3,16 +3,6 @@
 .menu__inner-toggle,
 .menu__toggle {
 	display: none;
-	// display: block;
-	// position: absolute;
-	// left: auto;
-	// right: get-spacing(1);
-	// top: get-spacing(1);
-	// width: get-spacing(2);
-	// height: get-spacing(2);
-	// @media screen and (min-width: bp(sm)) {
-	// 	display: none;
-	// }
 }
 
 %site-logo--small {
@@ -21,7 +11,7 @@
 		width: 30px;
 		height: 32px;
 		position: absolute;
-		left: get-spacing(2);
+		left: get-spacing( 2 );
 	}
 
 	.logo-mobile {
@@ -39,37 +29,41 @@
 	width: 100%;
 	background: #fff;
 	z-index: 10;
-	box-shadow: 0 0 6px rgba(0, 0, 0, 0.23);
+	box-shadow: 0 0 6px rgba( 0, 0, 0, 0.23 );
 
 	body.admin-bar & {
 		top: 32px;
 	}
+
+	@media screen and ( max-width: bp(sm) ) {
+		body.admin-bar .out-of-view & {
+			top: 0;
+		}
+	}
 }
 
 .site-header {
-
 	position: relative;
 
 	.menu {
-
 		list-style: none;
 		margin: 0 auto;
-		padding: 0 get-spacing(3);
+		padding: 0 get-spacing( 3 );
 		display: flex;
 		justify-content: space-between;
 		max-width: 578px;
-		padding-bottom: get-spacing(0.75);
-		margin-left: get-spacing(4);
+		padding-bottom: get-spacing( 0.75 );
+		margin-left: get-spacing( 4 );
 
 		.menu-item {
-			margin: get-spacing(0.33) 0 get-spacing(0.33) 0;
+			margin: get-spacing( 0.33 ) 0 get-spacing( 0.33 ) 0;
 
 			a {
 				display: block;
 				padding-left: 0;
 				padding-right: 0;
 				font-family: $font;
-				color: color(text);
+				color: color( text );
 				text-decoration: none;
 				font-weight: 700;
 				@include the-font;
@@ -78,7 +72,7 @@
 				&::after {
 					content: '';
 					display: block;
-					background-image: url('../images/nav-dash.svg');
+					background-image: url( '../images/nav-dash.svg' );
 					background-repeat: no-repeat;
 					background-size: contain;
 					position: absolute;
@@ -104,7 +98,6 @@
 	}
 
 	@media screen and ( min-width: bp(sm) ) {
-
 		margin-left: auto;
 		margin-right: auto;
 		height: 200px;
@@ -114,28 +107,28 @@
 			max-height: 100%;
 			height: auto;
 			padding: 0;
-			padding-bottom: get-spacing(1.5);
+			padding-bottom: get-spacing( 1.5 );
 			margin-left: auto;
 		}
 	}
 }
 
-.site-header:not(.out-of-view) {
+.site-header.in-view {
 	@media screen and ( min-width: bp(sm) ) {
 		.nav--primary {
 			box-shadow: none;
 		}
 	}
-
 }
-.site-header.out-of-view {
 
+.site-header.out-of-view {
 	.site-branding {
 		@extend %site-logo--small;
+		margin-top: get-spacing( 1.5 );
 	}
 
 	.nav--primary.alt-top {
-		@extend  %nav--primary--small;
+		@extend %nav--primary--small;
 	}
 }
 
@@ -148,6 +141,10 @@
 	margin-top: get-spacing();
 
 	@extend %site-logo--small;
+
+	@media screen and ( max-width: bp(sm) ) {
+		margin-top: get-spacing( 3 );
+	}
 
 	@media screen and ( min-width: bp(sm) ) {
 		.site-logo {
