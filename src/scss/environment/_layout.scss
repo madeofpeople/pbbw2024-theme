@@ -1,7 +1,9 @@
 @use 'sass:map';
 
 $space: get-spacing();
-$partner-logo-height: 130px;
+$partner-logo-height--sm: 80px;
+$partner-logo-height--mid: 100px;
+$partner-logo-height--lg: 130px;
 $tout-height: 490px;
 
 *,
@@ -205,15 +207,15 @@ h2.has-background-color {
 
 		.wp-block-image {
 			position: relative;
-			height: $partner-logo-height;
+			height: $partner-logo-height--sm;
 			width: auto;
 
 			> a,
 			> img {
 				display: block;
 				width: auto;
-				max-width: 340px;
-				height: $partner-logo-height;
+				max-width: 150px;
+				height: $partner-logo-height--sm;
 				box-sizing: content-box;
 				position: relative;
 			}
@@ -235,8 +237,34 @@ h2.has-background-color {
 				vertical-align: middle;
 				display: block;
 				position: relative;
-				height: $partner-logo-height;
+				height: $partner-logo-height--sm;
 				width: auto;
+			}
+
+			@media screen and ( min-width: bp(sm) ) {
+				height: $partner-logo-height--mid;
+
+				> a,
+				> img {
+					max-width: 200px;
+					height: $partner-logo-height--mid;
+				}
+				img {
+					height: $partner-logo-height--mid;
+				}
+			}
+
+			@media screen and ( min-width: bp(md) ) {
+				height: $partner-logo-height--lg;
+
+				> a,
+				> img {
+					max-width: 340px;
+					height: $partner-logo-height--lg;
+				}
+				img {
+					height: $partner-logo-height--lg;
+				}
 			}
 		}
 	}

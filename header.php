@@ -29,15 +29,6 @@ $body_class_appentions = array('site-wrapper');
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 	<?php wp_head(); ?>
-
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9DD8PD4BDP"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'G-9DD8PD4BDP');
-	</script>
 </head>
 
 <body <?php body_class( $body_class_appentions ); ?>>
@@ -117,7 +108,7 @@ $body_class_appentions = array('site-wrapper');
 					$description = get_bloginfo( 'description', 'display' );
 					if ( $description || is_customize_preview() ) :
 						?>
-						<p class="site-description"><?php echo esc_html( $description ); ?></p>
+						<p class="site-description screen-reader-text"><?php echo esc_html( $description ); ?></p>
 					<?php endif; ?>
 
 				</div><!-- .site-branding -->
