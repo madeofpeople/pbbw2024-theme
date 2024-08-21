@@ -1,0 +1,46 @@
+section.articles {
+	padding-bottom: get-spacing( 4.56 );
+	padding-top: 2.65rem;
+
+	.wp-block-site-functionality-linked-article {
+		.tout__title {
+			margin-bottom: 0;
+		}
+
+		.tout__content {
+			margin-top: 0;
+		}
+	}
+
+	.article-list-text {
+		padding: 0;
+		margin: get-spacing( 3 ) 0 0 0;
+		line-height: 1.2;
+
+		li {
+			margin-bottom: get-spacing( 0.75 );
+		}
+
+		a {
+			text-decoration: none;
+			color: color( heading );
+
+			&:visited {
+				color: color( heading );
+			}
+		}
+
+		strong {
+			color: colors( heading );
+		}
+
+		a:first-child {
+			@include the-font;
+			@include headings( h4 );
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+	}
+}

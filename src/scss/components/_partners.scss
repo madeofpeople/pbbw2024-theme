@@ -1,0 +1,117 @@
+$partner-logo-height--sm: 80px;
+$partner-logo-height--mid: 100px;
+$partner-logo-height--lg: 130px;
+
+.partners {
+	margin: get-spacing( 3 ) get-spacing( 2 );
+
+	.logo-grid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		.wp-block-image {
+			position: relative;
+			height: $partner-logo-height--sm;
+			width: auto;
+
+			> a,
+			> img {
+				display: block;
+				width: auto;
+				max-width: 150px;
+				height: $partner-logo-height--sm;
+				box-sizing: content-box;
+				position: relative;
+			}
+
+			> a {
+				padding: get-spacing();
+				transition-property: padding, border-width, border-color;
+				transition-timing-function: ease-out;
+				transition-duration: 0.1s;
+				border: 2px transparent solid;
+
+				&:hover,
+				&:focus {
+					border: 2px #dedede solid;
+				}
+			}
+
+			img {
+				vertical-align: middle;
+				display: block;
+				position: relative;
+				height: $partner-logo-height--sm;
+				width: auto;
+			}
+
+			@media screen and ( min-width: bp(sm) ) {
+				height: $partner-logo-height--mid;
+
+				> a,
+				> img {
+					max-width: 200px;
+					height: $partner-logo-height--mid;
+				}
+				img {
+					height: $partner-logo-height--mid;
+				}
+			}
+
+			@media screen and ( min-width: bp(md) ) {
+				height: $partner-logo-height--lg;
+
+				> a,
+				> img {
+					max-width: 340px;
+					height: $partner-logo-height--lg;
+				}
+				img {
+					height: $partner-logo-height--lg;
+				}
+			}
+		}
+	}
+
+	.partner-links {
+		margin: 0 0 get-spacing( 2 ) 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+
+		> li {
+			display: inline-block;
+			position: relative;
+			margin-right: 0.75rem;
+
+			&::after {
+				content: '|';
+				display: inline-block;
+				margin-left: 0.25rem;
+				margin-right: 0.25rem;
+				position: absolute;
+				top: 0.25rem;
+				right: -0.75rem;
+
+				&:last-of-type::after {
+					content: '';
+				}
+			}
+		}
+
+		a {
+			display: block;
+			padding: 0.25em 0.5em;
+			text-decoration: none;
+			text-align: center;
+
+			&:hover {
+				background-color: color( body-text );
+				color: color( background );
+			}
+		}
+	}
+}

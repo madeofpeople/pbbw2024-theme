@@ -1,13 +1,50 @@
 @use 'sass:map';
 
-$bps : (
-	'xs': 400px,
-	'sm': 750px,
+$bps: (
+	'xs': 500px,
+	'sm': 780px,
 	'md': 900px,
 	'lg': 1000px,
-	'xl': 1400px
+	'xl': 1400px,
 );
 
-@function bp($bp) {
-    @return map.get($bps, $bp);
+@function bp( $bp ) {
+	@return map.get( $bps, $bp );
+}
+
+body {
+	@extend %breakpoint-indicator;
+}
+
+%breakpoint-indicator {
+	&::before {
+		position: fixed;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		content: '—';
+		top: 0;
+		right: 0;
+		z-index: 1000000;
+		padding: 0.25rem 0.5rem;
+		background: rgba( 0, 0, 0, 0.75 );
+		color: #fff;
+		border-radius: 0 0 0 0.25rem;
+
+		@media ( min-width: bp(xs) ) {
+			content: 'xs';
+		}
+		@media ( min-width: bp(sm) ) {
+			content: 'sm';
+		}
+		@media ( min-width: bp(md) ) {
+			content: 'md';
+		}
+		@media ( min-width: bp(lg) ) {
+			content: 'lg';
+		}
+		@media ( min-width: bp(xl) ) {
+			content: 'xl';
+		}
+	}
 }

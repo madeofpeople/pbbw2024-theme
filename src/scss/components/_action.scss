@@ -1,0 +1,81 @@
+$tout-height: 490px;
+
+.how-you-can-help {
+	background-color: color( body-text );
+
+	.actions {
+		padding-bottom: get-spacing( 3 );
+	}
+
+	.wp-block-cover__inner-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: first baseline;
+
+		.wp-block-heading {
+			margin-top: 0;
+			text-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.4 );
+			margin-bottom: 0;
+		}
+
+		p {
+			max-width: 54%;
+		}
+	}
+
+	.wp-block-columns {
+		max-width: 1500px;
+		margin: 0 auto;
+		column-gap: 0;
+		row-gap: 0;
+		margin-bottom: 0;
+		padding: 0;
+		overflow: hidden;
+
+		.wp-block-cover {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: first baseline;
+			padding: get-spacing( 3 );
+		}
+
+		@media screen and ( max-width: bp(sm) ) {
+			// specific styles for the shop tout on mobile
+			.shop-tout-column {
+				max-height: 280px;
+
+				.wp-block-cover.shop-tout {
+					min-height: auto;
+					max-height: 280px;
+					height: 280px;
+					object-fit: contain;
+					object-position: top;
+				}
+				.wp-block-cover__image-background {
+					object-fit: fill;
+					height: auto;
+				}
+			}
+		}
+
+		@media screen and ( min-width: bp(sm) ) {
+			.wp-block-cover {
+				max-height: $tout-height;
+				min-height: $tout-height;
+				height: $tout-height;
+				padding: get-spacing( 3 );
+				object-fit: cover;
+			}
+
+			.wp-block-cover.shop-tout {
+				max-height: $tout-height !important;
+				min-height: $tout-height !important;
+				height: $tout-height !important;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+	}
+}
