@@ -12,9 +12,9 @@ $bps: (
 	@return map.get( $bps, $bp );
 }
 
-body {
-	@extend %breakpoint-indicator;
-}
+// body {
+// 	@extend %breakpoint-indicator;
+// }
 
 %breakpoint-indicator {
 	&::before {

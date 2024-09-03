@@ -1,10 +1,14 @@
 $tout-height: 490px;
 
 .how-you-can-help {
-	background-color: color( body-text );
+	background-color: #000; //color( 000-text );
 
 	.actions {
+		max-width: 1500px;
+		margin: 0 auto;
+		padding-top: get-spacing( 3 );
 		padding-bottom: get-spacing( 3 );
+		background-color: color( 'body-text' );
 	}
 
 	.wp-block-cover__inner-container {
