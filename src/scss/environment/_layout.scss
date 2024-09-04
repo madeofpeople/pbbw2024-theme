@@ -63,7 +63,7 @@ h2.has-background-color {
 		max-width: 1100px;
 		margin: 0 auto;
 		@media screen and ( min-width: bp(md) ) {
-			height: auto;
+			object-fit: contain;
 		}
 	}
 }
